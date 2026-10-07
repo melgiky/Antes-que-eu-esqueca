@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bdgxtgvvsnl0q"]
+
+[ext_resource type="Script" uid="uid://i8hp2x2bods8" path="res://Scripts/puzzle/puzzle_piece.gd" id="1_fgrtf"]
+[ext_resource type="Texture2D" uid="uid://c75jrp57x4wfs" path="res://Assets/Menu e UI/icon.svg" id="2_s7q2e"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fqimd"]
+size = Vector2(126.5, 126.5)
+
+[node name="PuzzlePiece" type="Area2D" unique_id=1143921462]
+script = ExtResource("1_fgrtf")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2102832562]
+texture = ExtResource("2_s7q2e")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=601211073]
+position = Vector2(-0.25, -0.25)
+shape = SubResource("RectangleShape2D_fqimd")

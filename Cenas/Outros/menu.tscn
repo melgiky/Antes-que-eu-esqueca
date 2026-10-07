@@ -1,0 +1,239 @@
+[gd_scene format=3 uid="uid://bsdd5doaa3csb"]
+
+[ext_resource type="Script" uid="uid://b6x7deedoesjn" path="res://Scripts/menu.gd" id="1_45u28"]
+[ext_resource type="Texture2D" uid="uid://c546ffk7k01yt" path="res://Assets/Menu e UI/Background-menu/Plan-6.png" id="1_s5bn5"]
+[ext_resource type="Texture2D" uid="uid://cwickyvps5bks" path="res://Assets/Menu e UI/Background-menu/Plan-5.png" id="2_4n6gl"]
+[ext_resource type="Texture2D" uid="uid://dgnqqa6rpropw" path="res://Assets/Menu e UI/Background-menu/Plan-4.png" id="3_45u28"]
+[ext_resource type="Texture2D" uid="uid://bjwkgokwctpcf" path="res://Assets/Menu e UI/Background-menu/Plan-3.png" id="4_p2sdh"]
+[ext_resource type="Texture2D" uid="uid://xyf835es4k8" path="res://Assets/Menu e UI/Background-menu/Plan-2.png" id="5_n22co"]
+[ext_resource type="Texture2D" uid="uid://d0u75vkliqfl1" path="res://Assets/Menu e UI/Background-menu/Plan-1.png" id="6_4n6gl"]
+[ext_resource type="FontFile" uid="uid://b0s1l7p20t4h6" path="res://Assets/Menu e UI/Fraunces-Italic-VariableFont_SOFT,WONK,opsz,wght.ttf" id="8_n22co"]
+[ext_resource type="Texture2D" uid="uid://b1yl05dmqh1rv" path="res://Assets/Menu e UI/ELR-WindyLeafs/ELR_FallLeaf.png" id="10_rasus"]
+[ext_resource type="Texture2D" uid="uid://fseyd6unp0sc" path="res://Assets/Menu e UI/logosemestilhaços.png" id="10_snclk"]
+[ext_resource type="Texture2D" uid="uid://bvqn6p5l0dh10" path="res://Assets/Menu e UI/polaroid.png" id="11_snclk"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_3eiwf"]
+particle_flag_disable_z = true
+direction = Vector3(0, 1, 0)
+spread = 10.0
+angular_velocity_min = -30.000015
+angular_velocity_max = 29.999983
+orbit_velocity_min = 0.0860001
+orbit_velocity_max = 0.0860001
+radial_velocity_min = 129.02997
+radial_velocity_max = 526.87994
+gravity = Vector3(0, 20, 0)
+linear_accel_min = 41.94
+linear_accel_max = 91.399994
+sub_emitter_mode = 1
+sub_emitter_frequency = 4.0
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_0j38o"]
+
+[sub_resource type="Gradient" id="Gradient_snclk"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_a7wnu"]
+gradient = SubResource("Gradient_snclk")
+
+[node name="Menu" type="Control" unique_id=460745824]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_45u28")
+intensidade = 20.0
+
+[node name="ParallaxBg" type="Node2D" parent="." unique_id=908789459]
+modulate = Color(0.83033526, 0.83033514, 0.83033514, 1)
+position = Vector2(-85, -19)
+scale = Vector2(1.1441901, 1.1441901)
+
+[node name="Parallax2D" type="Parallax2D" parent="ParallaxBg" unique_id=507917407]
+texture_filter = 1
+scroll_scale = Vector2(0.4, 0.4)
+repeat_size = Vector2(576, 0)
+
+[node name="Plan6" type="Sprite2D" parent="ParallaxBg/Parallax2D" unique_id=327971875]
+position = Vector2(288, 163)
+texture = ExtResource("1_s5bn5")
+
+[node name="Parallax2D2" type="Parallax2D" parent="ParallaxBg" unique_id=222330265]
+texture_filter = 1
+scroll_scale = Vector2(0.5, 0.5)
+repeat_size = Vector2(576, 0)
+follow_viewport = false
+
+[node name="Plan6" type="Sprite2D" parent="ParallaxBg/Parallax2D2" unique_id=760868036]
+position = Vector2(288, 163)
+texture = ExtResource("2_4n6gl")
+
+[node name="Parallax2D3" type="Parallax2D" parent="ParallaxBg" unique_id=479420088]
+texture_filter = 1
+scroll_scale = Vector2(0.6, 0.6)
+repeat_size = Vector2(576, 0)
+
+[node name="Plan6" type="Sprite2D" parent="ParallaxBg/Parallax2D3" unique_id=1755349983]
+position = Vector2(288, 163)
+texture = ExtResource("3_45u28")
+
+[node name="Parallax2D4" type="Parallax2D" parent="ParallaxBg" unique_id=796221483]
+texture_filter = 1
+scroll_scale = Vector2(0.7, 0.7)
+repeat_size = Vector2(576, 0)
+
+[node name="Plan6" type="Sprite2D" parent="ParallaxBg/Parallax2D4" unique_id=395556310]
+position = Vector2(288, 163)
+texture = ExtResource("4_p2sdh")
+
+[node name="Parallax2D5" type="Parallax2D" parent="ParallaxBg" unique_id=1532280758]
+texture_filter = 1
+scroll_scale = Vector2(0.8, 0.8)
+repeat_size = Vector2(576, 0)
+
+[node name="Plan6" type="Sprite2D" parent="ParallaxBg/Parallax2D5" unique_id=1085283157]
+position = Vector2(288, 163)
+texture = ExtResource("5_n22co")
+
+[node name="Parallax2D6" type="Parallax2D" parent="ParallaxBg" unique_id=2035086288]
+texture_filter = 1
+scroll_scale = Vector2(0.9, 0.9)
+repeat_size = Vector2(576, 0)
+
+[node name="Plan6" type="Sprite2D" parent="ParallaxBg/Parallax2D6" unique_id=1178448148]
+position = Vector2(288, 163)
+texture = ExtResource("6_4n6gl")
+
+[node name="Parallax2D7" type="Parallax2D" parent="ParallaxBg" unique_id=1257319418]
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=1517580216]
+texture_filter = 1
+position = Vector2(609, -1)
+scale = Vector2(2, 2)
+amount = 10
+texture = ExtResource("10_rasus")
+preprocess = 1.0
+speed_scale = 0.13
+randomness = 0.16
+use_fixed_seed = true
+seed = 3954169046
+process_material = SubResource("ParticleProcessMaterial_3eiwf")
+
+[node name="GPUParticles2D2" type="GPUParticles2D" parent="." unique_id=1083272098]
+texture_filter = 1
+position = Vector2(360, 7)
+scale = Vector2(2, 2)
+amount = 10
+texture = ExtResource("10_rasus")
+speed_scale = 0.13
+randomness = 0.16
+use_fixed_seed = true
+seed = 3954169046
+process_material = SubResource("ParticleProcessMaterial_3eiwf")
+
+[node name="GPUParticles2D3" type="GPUParticles2D" parent="." unique_id=1037054645]
+texture_filter = 1
+position = Vector2(847, 9)
+scale = Vector2(2, 2)
+amount = 10
+texture = ExtResource("10_rasus")
+speed_scale = 0.13
+randomness = 0.16
+use_fixed_seed = true
+seed = 3954169046
+process_material = SubResource("ParticleProcessMaterial_3eiwf")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=846541297]
+modulate = Color(0, 0, 0, 1)
+self_modulate = Color(1, 1, 1, 0.6)
+layout_mode = 0
+offset_left = -1.0
+offset_top = 1.0
+offset_right = 578.0
+offset_bottom = 324.0
+texture = SubResource("CanvasTexture_0j38o")
+
+[node name="Control" type="Control" parent="." unique_id=706677655]
+layout_mode = 1
+anchors_preset = 0
+offset_left = 422.0
+offset_top = 109.0
+offset_right = 462.0
+offset_bottom = 149.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control" unique_id=883417238]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 45.999992
+offset_right = 172.56656
+offset_bottom = 159.0
+
+[node name="iniciar" type="Button" parent="Control/VBoxContainer" unique_id=1985969016]
+layout_mode = 2
+theme_override_colors/font_focus_color = Color(0.5372549, 0.53333336, 0.53333336, 1)
+theme_override_colors/font_pressed_color = Color(0.5364543, 0.5317153, 0.53289515, 1)
+theme_override_colors/font_hover_color = Color(0.5372549, 0.53333336, 0.53333336, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.5372549, 0.53333336, 0.53333336, 1)
+theme_override_constants/outline_size = 0
+theme_override_fonts/font = ExtResource("8_n22co")
+theme_override_font_sizes/font_size = 21
+text = "Iniciar"
+flat = true
+alignment = 0
+
+[node name="opcoes" type="Button" parent="Control/VBoxContainer" unique_id=2082369342]
+layout_mode = 2
+theme_override_colors/font_focus_color = Color(0.5372549, 0.53333336, 0.53333336, 1)
+theme_override_colors/font_pressed_color = Color(0.5372549, 0.53333336, 0.53333336, 1)
+theme_override_colors/font_hover_color = Color(0.5372549, 0.53333336, 0.53333336, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.5372549, 0.53333336, 0.53333336, 1)
+theme_override_constants/outline_size = 0
+theme_override_fonts/font = ExtResource("8_n22co")
+theme_override_font_sizes/font_size = 21
+text = "Opções"
+flat = true
+alignment = 0
+
+[node name="sair" type="Button" parent="Control/VBoxContainer" unique_id=319906038]
+layout_mode = 2
+theme_override_colors/font_focus_color = Color(0.5372549, 0.53333336, 0.53333336, 1)
+theme_override_colors/font_pressed_color = Color(0.5372549, 0.53333336, 0.53333336, 1)
+theme_override_colors/font_hover_color = Color(0.5372549, 0.53333336, 0.53333336, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.5372549, 0.53333336, 0.53333336, 1)
+theme_override_constants/outline_size = 0
+theme_override_fonts/font = ExtResource("8_n22co")
+theme_override_font_sizes/font_size = 21
+text = "Sair"
+flat = true
+alignment = 0
+
+[node name="Logosemestilhaços" type="Sprite2D" parent="." unique_id=915453617]
+position = Vector2(464.43347, 117.520134)
+scale = Vector2(0.23504026, 0.23504026)
+texture = ExtResource("10_snclk")
+offset = Vector2(4.623291, 0)
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=915013462]
+position = Vector2(771, 217.00002)
+rotation = 0.22098783
+scale = Vector2(1.6437806, 369.386)
+color = Color(0.7570758, 0.52365226, 0.196753, 1)
+texture = SubResource("GradientTexture2D_a7wnu")
+
+[node name="PointLight2D2" type="PointLight2D" parent="." unique_id=1107401579]
+position = Vector2(588, 212.00003)
+rotation = 0.22098783
+scale = Vector2(1.6437806, 369.386)
+color = Color(0.7570758, 0.52365226, 0.196753, 1)
+texture = SubResource("GradientTexture2D_a7wnu")
+
+[node name="Polaroid" type="Sprite2D" parent="." unique_id=1507596999]
+position = Vector2(720.00006, 170)
+scale = Vector2(0.1742982, 0.1742982)
+texture = ExtResource("11_snclk")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=251956552]
+position = Vector2(358, 7)
+anchor_mode = 0
+zoom = Vector2(2.3, 2.3)
+
+[connection signal="pressed" from="Control/VBoxContainer/iniciar" to="." method="_on_iniciar_pressed"]
+[connection signal="pressed" from="Control/VBoxContainer/opcoes" to="." method="_on_opcoes_pressed"]
+[connection signal="pressed" from="Control/VBoxContainer/sair" to="." method="_on_sair_pressed"]

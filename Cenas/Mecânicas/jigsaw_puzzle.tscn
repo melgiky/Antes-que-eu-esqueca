@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://cnryq08uokamr"]
+
+[ext_resource type="PackedScene" uid="uid://bdkhna0ym5k04" path="res://Cenas/Player/Player.tscn" id="1_5ee3c"]
+
+[node name="Jigsaw Puzzle" type="Node2D" unique_id=617900184]
+
+[node name="Player" parent="." unique_id=1053805525 instance=ExtResource("1_5ee3c")]

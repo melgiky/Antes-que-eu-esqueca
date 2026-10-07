@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://cbxnnmhpy258w"]
+
+[ext_resource type="Script" uid="uid://7unra42mmwl7" path="res://Scripts/testeintenracao.gd" id="1_cmh0m"]
+[ext_resource type="PackedScene" uid="uid://qxc6y5vnc1g5" path="res://Cenas/Interações/INTERACTION_AREA/interaction_area.tscn" id="2_3on68"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_s20dg"]
+radius = 17.029387
+
+[node name="oculosInteractable" type="Node2D" unique_id=644009879]
+script = ExtResource("1_cmh0m")
+
+[node name="InteractionArea" parent="." unique_id=1968524516 instance=ExtResource("2_3on68")]
+light_mask = 0
+visibility_layer = 2
+action_name = "interagir"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea" unique_id=2070906669]
+shape = SubResource("CircleShape2D_s20dg")

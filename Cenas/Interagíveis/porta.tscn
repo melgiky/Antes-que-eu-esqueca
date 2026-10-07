@@ -1,0 +1,100 @@
+[gd_scene format=3 uid="uid://bbcmhjjegstui"]
+
+[ext_resource type="Texture2D" uid="uid://coxi8tsfspkfd" path="res://Assets/Arte/portamarrom.png" id="1_38yjj"]
+[ext_resource type="Script" uid="uid://bqqoh38a7ox6r" path="res://Scripts/porta.gd" id="1_wxqpq"]
+[ext_resource type="PackedScene" uid="uid://qxc6y5vnc1g5" path="res://Cenas/Interações/INTERACTION_AREA/interaction_area.tscn" id="2_b0sw6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b0sw6"]
+atlas = ExtResource("1_38yjj")
+region = Rect2(0, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wxqpq"]
+atlas = ExtResource("1_38yjj")
+region = Rect2(64, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0bbyq"]
+atlas = ExtResource("1_38yjj")
+region = Rect2(0, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6el48"]
+atlas = ExtResource("1_38yjj")
+region = Rect2(16, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1rhmm"]
+atlas = ExtResource("1_38yjj")
+region = Rect2(32, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i4xn3"]
+atlas = ExtResource("1_38yjj")
+region = Rect2(48, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7uia6"]
+atlas = ExtResource("1_38yjj")
+region = Rect2(64, 0, 16, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_s20dg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b0sw6")
+}],
+"loop": 0,
+"name": &"closed",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wxqpq")
+}],
+"loop": 0,
+"name": &"open",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0bbyq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6el48")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1rhmm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i4xn3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7uia6")
+}],
+"loop": 0,
+"name": &"opening",
+"speed": 7.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s20dg"]
+size = Vector2(16, 16)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_s20dg"]
+radius = 21.189621
+
+[node name="porta" type="Node2D" unique_id=942141203]
+y_sort_enabled = true
+script = ExtResource("1_wxqpq")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1203726646]
+self_modulate = Color(1.2213017, 1.613483, 1.6197081, 1)
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_s20dg")
+animation = &"closed"
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=2092945127]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=595203433]
+position = Vector2(0, 8)
+shape = SubResource("RectangleShape2D_s20dg")
+
+[node name="InteractionArea" parent="." unique_id=1968524516 instance=ExtResource("2_b0sw6")]
+action_name = "interagir"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea" unique_id=1007042620]
+shape = SubResource("CircleShape2D_s20dg")

@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cgc0hrwp3tugv"]
+
+[ext_resource type="Script" uid="uid://bx7lmoxwch8tu" path="res://Scripts/puzzle/puzzle.gd" id="1_kq55u"]
+
+[node name="Puzzle" type="Node2D" unique_id=617900184]
+script = ExtResource("1_kq55u")
+
+[node name="Board" type="Node2D" parent="." unique_id=388195677]
+
+[node name="Pieces" type="Node2D" parent="." unique_id=689793328]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=400788582]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1703477506]
+position = Vector2(581, 320)

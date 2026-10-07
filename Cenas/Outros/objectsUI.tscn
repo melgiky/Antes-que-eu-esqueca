@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://qrveqc2vd6i5"]
+
+[ext_resource type="Script" uid="uid://c05668ctuu25y" path="res://Scripts/puzzle/objectivesUI.gd" id="1_pk804"]
+[ext_resource type="FontFile" uid="uid://b1rmmejabkbd5" path="res://Assets/Menu e UI/Papernotes-menu.otf" id="2_mwkoe"]
+
+[sub_resource type="Theme" id="Theme_nirur"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_pk804"]
+font = ExtResource("2_mwkoe")
+font_size = 25
+
+[sub_resource type="LabelSettings" id="LabelSettings_epeqd"]
+font = ExtResource("2_mwkoe")
+font_size = 20
+
+[node name="CanvasGroup" type="CanvasLayer" unique_id=1183710810]
+script = ExtResource("1_pk804")
+
+[node name="Panel" type="Panel" parent="." unique_id=1007924037]
+offset_left = 9.0
+offset_top = 9.0
+offset_right = 218.0
+offset_bottom = 89.0
+theme = SubResource("Theme_nirur")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel" unique_id=84014877]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 7.0
+offset_right = 203.0
+offset_bottom = 72.0
+
+[node name="title" type="Label" parent="Panel/VBoxContainer" unique_id=74395953]
+layout_mode = 2
+text = "Objetivos"
+label_settings = SubResource("LabelSettings_pk804")
+horizontal_alignment = 1
+
+[node name="objetivo" type="Label" parent="Panel/VBoxContainer" unique_id=954108383]
+layout_mode = 2
+label_settings = SubResource("LabelSettings_epeqd")
