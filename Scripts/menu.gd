@@ -2,6 +2,9 @@ extends Control
 
 @export var intensidade := 15.0
 
+func _ready():
+	AudioManager.play("pianoMenu")
+	AudioManager.play("forestMenu")
 
 func _process(delta):
 	var mouse_pos := get_viewport().get_mouse_position()
@@ -17,7 +20,6 @@ func _process(delta):
 	$ParallaxBg/Parallax2D4.position = mouse_normalizado * 10.0
 	$ParallaxBg/Parallax2D5.position = mouse_normalizado * 12.0
 	$ParallaxBg/Parallax2D6.position = mouse_normalizado * 15.0
-
 
 func _on_iniciar_pressed() -> void:
 	Transitions.transition()

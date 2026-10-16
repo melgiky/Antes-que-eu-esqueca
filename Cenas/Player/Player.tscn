@@ -259,7 +259,7 @@ collision_layer = 3
 collision_mask = 3
 script = ExtResource("1_r8ryd")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1428842599 groups=["player"]]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1428842599]
 position = Vector2(0, 9)
 shape = SubResource("RectangleShape2D_s20dg")
 

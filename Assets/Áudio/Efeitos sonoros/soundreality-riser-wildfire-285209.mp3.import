@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dc8abg4jfpga3"
+path="res://.godot/imported/soundreality-riser-wildfire-285209.mp3-e6ef99d1173dbf62a398a017cda8f988.mp3str"
+
+[deps]
+
+source_file="res://Assets/Áudio/Efeitos sonoros/soundreality-riser-wildfire-285209.mp3"
+dest_files=["res://.godot/imported/soundreality-riser-wildfire-285209.mp3-e6ef99d1173dbf62a398a017cda8f988.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

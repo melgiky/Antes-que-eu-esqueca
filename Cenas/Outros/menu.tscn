@@ -1,23 +1,25 @@
 [gd_scene format=3 uid="uid://bsdd5doaa3csb"]
 
 [ext_resource type="Script" uid="uid://b6x7deedoesjn" path="res://Scripts/menu.gd" id="1_45u28"]
-[ext_resource type="Texture2D" uid="uid://c546ffk7k01yt" path="res://Assets/Menu e UI/Background-menu/Plan-6.png" id="1_s5bn5"]
-[ext_resource type="Texture2D" uid="uid://cwickyvps5bks" path="res://Assets/Menu e UI/Background-menu/Plan-5.png" id="2_4n6gl"]
-[ext_resource type="Texture2D" uid="uid://dgnqqa6rpropw" path="res://Assets/Menu e UI/Background-menu/Plan-4.png" id="3_45u28"]
-[ext_resource type="Texture2D" uid="uid://bjwkgokwctpcf" path="res://Assets/Menu e UI/Background-menu/Plan-3.png" id="4_p2sdh"]
-[ext_resource type="Texture2D" uid="uid://xyf835es4k8" path="res://Assets/Menu e UI/Background-menu/Plan-2.png" id="5_n22co"]
-[ext_resource type="Texture2D" uid="uid://d0u75vkliqfl1" path="res://Assets/Menu e UI/Background-menu/Plan-1.png" id="6_4n6gl"]
-[ext_resource type="FontFile" uid="uid://b0s1l7p20t4h6" path="res://Assets/Menu e UI/Fraunces-Italic-VariableFont_SOFT,WONK,opsz,wght.ttf" id="8_n22co"]
-[ext_resource type="Texture2D" uid="uid://b1yl05dmqh1rv" path="res://Assets/Menu e UI/ELR-WindyLeafs/ELR_FallLeaf.png" id="10_rasus"]
-[ext_resource type="Texture2D" uid="uid://fseyd6unp0sc" path="res://Assets/Menu e UI/logosemestilhaços.png" id="10_snclk"]
-[ext_resource type="Texture2D" uid="uid://bvqn6p5l0dh10" path="res://Assets/Menu e UI/polaroid.png" id="11_snclk"]
+[ext_resource type="Texture2D" uid="uid://c546ffk7k01yt" path="res://Assets/Menu e UI/Background-menu-fall/Plan-6.png" id="1_s5bn5"]
+[ext_resource type="Texture2D" uid="uid://cwickyvps5bks" path="res://Assets/Menu e UI/Background-menu-fall/Plan-5.png" id="2_4n6gl"]
+[ext_resource type="Texture2D" uid="uid://dgnqqa6rpropw" path="res://Assets/Menu e UI/Background-menu-fall/Plan-4.png" id="3_45u28"]
+[ext_resource type="Texture2D" uid="uid://bjwkgokwctpcf" path="res://Assets/Menu e UI/Background-menu-fall/Plan-3.png" id="4_p2sdh"]
+[ext_resource type="Texture2D" uid="uid://xyf835es4k8" path="res://Assets/Menu e UI/Background-menu-fall/Plan-2.png" id="5_n22co"]
+[ext_resource type="Texture2D" uid="uid://d0u75vkliqfl1" path="res://Assets/Menu e UI/Background-menu-fall/Plan-1.png" id="6_4n6gl"]
+[ext_resource type="Texture2D" uid="uid://bj6vmw8tsvyni" path="res://Assets/Menu e UI/imagens/11994f16-96f7-42b7-aaa4-284fe4c97b49.png" id="8_hirk4"]
+[ext_resource type="FontFile" uid="uid://b0s1l7p20t4h6" path="res://Assets/Menu e UI/Fontes/Fraunces-Italic-VariableFont_SOFT,WONK,opsz,wght.ttf" id="8_n22co"]
+[ext_resource type="Texture2D" uid="uid://ji00ct853e7n" path="res://Assets/Menu e UI/imagens/pilha_polaroid.png" id="9_fdxn8"]
+[ext_resource type="Texture2D" uid="uid://b1yl05dmqh1rv" path="res://Assets/Menu e UI/imagens/ELR-WindyLeafs/ELR_FallLeaf.png" id="10_rasus"]
+[ext_resource type="Texture2D" uid="uid://fseyd6unp0sc" path="res://Assets/Menu e UI/imagens/logosemestilhaços.png" id="10_snclk"]
+[ext_resource type="Texture2D" uid="uid://bvqn6p5l0dh10" path="res://Assets/Menu e UI/imagens/polaroid.png" id="11_snclk"]
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_3eiwf"]
 particle_flag_disable_z = true
 direction = Vector3(0, 1, 0)
 spread = 10.0
 angular_velocity_min = -30.000015
-angular_velocity_max = 29.999983
+angular_velocity_max = 37.739983
 orbit_velocity_min = 0.0860001
 orbit_velocity_max = 0.0860001
 radial_velocity_min = 129.02997
@@ -34,6 +36,12 @@ sub_emitter_frequency = 4.0
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_a7wnu"]
 gradient = SubResource("Gradient_snclk")
+
+[sub_resource type="Gradient" id="Gradient_hirk4"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_2wg5k"]
+gradient = SubResource("Gradient_hirk4")
+fill_from = Vector2(0, 0.6)
 
 [node name="Menu" type="Control" unique_id=460745824]
 layout_mode = 3
@@ -105,10 +113,11 @@ texture = ExtResource("6_4n6gl")
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=1517580216]
 texture_filter = 1
-position = Vector2(609, -1)
+position = Vector2(832, -22)
 scale = Vector2(2, 2)
-amount = 10
+amount = 50
 texture = ExtResource("10_rasus")
+lifetime = 4.0
 preprocess = 1.0
 speed_scale = 0.13
 randomness = 0.16
@@ -118,27 +127,48 @@ process_material = SubResource("ParticleProcessMaterial_3eiwf")
 
 [node name="GPUParticles2D2" type="GPUParticles2D" parent="." unique_id=1083272098]
 texture_filter = 1
-position = Vector2(360, 7)
+position = Vector2(359, -27)
 scale = Vector2(2, 2)
-amount = 10
+amount = 50
 texture = ExtResource("10_rasus")
+lifetime = 4.0
+preprocess = 1.0
 speed_scale = 0.13
 randomness = 0.16
 use_fixed_seed = true
 seed = 3954169046
 process_material = SubResource("ParticleProcessMaterial_3eiwf")
 
-[node name="GPUParticles2D3" type="GPUParticles2D" parent="." unique_id=1037054645]
+[node name="GPUParticles2D4" type="GPUParticles2D" parent="." unique_id=720473793]
 texture_filter = 1
-position = Vector2(847, 9)
+position = Vector2(586, -28)
 scale = Vector2(2, 2)
-amount = 10
+amount = 50
 texture = ExtResource("10_rasus")
+lifetime = 4.0
+preprocess = 1.0
 speed_scale = 0.13
 randomness = 0.16
 use_fixed_seed = true
 seed = 3954169046
 process_material = SubResource("ParticleProcessMaterial_3eiwf")
+
+[node name="PilhaPolaroid" type="Sprite2D" parent="." unique_id=544573107]
+position = Vector2(704, 160)
+scale = Vector2(0.2089118, 0.2089118)
+texture = ExtResource("9_fdxn8")
+
+[node name="Polaroid" type="Sprite2D" parent="." unique_id=1507596999]
+position = Vector2(704.00006, 167.14911)
+scale = Vector2(0.1742982, 0.1742982)
+texture = ExtResource("11_snclk")
+
+[node name="cacos" type="Sprite2D" parent="." unique_id=972130580]
+visible = false
+texture_repeat = 1
+position = Vector2(648, 169)
+scale = Vector2(0.34343052, 0.34343052)
+texture = ExtResource("8_hirk4")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=846541297]
 modulate = Color(0, 0, 0, 1)
@@ -160,10 +190,10 @@ offset_bottom = 149.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Control" unique_id=883417238]
 layout_mode = 0
-offset_left = 1.0
-offset_top = 45.999992
-offset_right = 172.56656
-offset_bottom = 159.0
+offset_left = -35.56656
+offset_top = 42.520134
+offset_right = 136.0
+offset_bottom = 155.52014
 
 [node name="iniciar" type="Button" parent="Control/VBoxContainer" unique_id=1985969016]
 layout_mode = 2
@@ -205,13 +235,13 @@ flat = true
 alignment = 0
 
 [node name="Logosemestilhaços" type="Sprite2D" parent="." unique_id=915453617]
-position = Vector2(464.43347, 117.520134)
+position = Vector2(464, 120.00001)
 scale = Vector2(0.23504026, 0.23504026)
 texture = ExtResource("10_snclk")
 offset = Vector2(4.623291, 0)
 
 [node name="PointLight2D" type="PointLight2D" parent="." unique_id=915013462]
-position = Vector2(771, 217.00002)
+position = Vector2(775.99994, 216)
 rotation = 0.22098783
 scale = Vector2(1.6437806, 369.386)
 color = Color(0.7570758, 0.52365226, 0.196753, 1)
@@ -222,17 +252,30 @@ position = Vector2(588, 212.00003)
 rotation = 0.22098783
 scale = Vector2(1.6437806, 369.386)
 color = Color(0.7570758, 0.52365226, 0.196753, 1)
-texture = SubResource("GradientTexture2D_a7wnu")
-
-[node name="Polaroid" type="Sprite2D" parent="." unique_id=1507596999]
-position = Vector2(720.00006, 170)
-scale = Vector2(0.1742982, 0.1742982)
-texture = ExtResource("11_snclk")
+texture = SubResource("GradientTexture2D_2wg5k")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=251956552]
 position = Vector2(358, 7)
 anchor_mode = 0
 zoom = Vector2(2.3, 2.3)
+
+[node name="pass" type="Button" parent="." unique_id=421747662]
+layout_mode = 0
+offset_left = 784.0
+offset_top = 149.14911
+offset_right = 802.0
+offset_bottom = 180.14911
+text = ">"
+
+[node name="rewind" type="Button" parent="." unique_id=999509653]
+layout_mode = 0
+offset_left = 608.0
+offset_top = 149.14911
+offset_right = 626.0
+offset_bottom = 180.14911
+text = "<"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=18256799]
 
 [connection signal="pressed" from="Control/VBoxContainer/iniciar" to="." method="_on_iniciar_pressed"]
 [connection signal="pressed" from="Control/VBoxContainer/opcoes" to="." method="_on_opcoes_pressed"]

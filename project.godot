@@ -14,7 +14,7 @@ config/name="Antes que eu esqueça"
 config/name_localized={
 "en": "Before I forget"
 }
-run/main_scene="uid://cwnana4xrxva2"
+run/main_scene="uid://bsdd5doaa3csb"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://Assets/Menu e UI/icon.svg"
 
@@ -24,6 +24,7 @@ InteractionManager="*uid://byiuboyuos7f1"
 Transitions="*uid://bq0f7cg4gdv3w"
 GameManager="*uid://dysolg7qo24pi"
 Dialogic="*uid://ds2q0uclmolvu"
+AudioManager="*uid://c0k14yqx22ugw"
 
 [dialogic]
 
@@ -78,7 +79,6 @@ audio/channel_defaults={
 
 window/size/viewport_width=1080
 window/size/viewport_height=720
-window/size/mode=3
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 

@@ -8,13 +8,23 @@ signal objetivo_atualizado
 var objetivos = {
 	"fase_1": [
 		{
-			"id": "pegar_chave",
-			"texto": "Encontre a chave",
+			"id": "escovar_dentes",
+			"texto": "Escove os dentes",
 			"completo": false
 		},
 		{
-			"id": "abrir_porta",
-			"texto": "Abra a porta",
+			"id": "descer_escada",
+			"texto": "Desça as escadas",
+			"completo": false
+		},
+		{
+			"id": "ferver_agua",
+			"texto": "Ligue a chaleira",
+			"completo": false
+		},
+				{
+			"id": "ir_jardim",
+			"texto":"Procure pela marta.",
 			"completo": false
 		}
 	],

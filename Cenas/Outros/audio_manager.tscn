@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://c0k14yqx22ugw"]
+
+[ext_resource type="Script" uid="uid://dd2r6xfvqyufo" path="res://Scripts/audio_manager.gd" id="1_f1xp6"]
+[ext_resource type="AudioStream" uid="uid://d0scojuq635kv" path="res://Assets/Áudio/Músicas/xgtg-nostalgia-a-sweet-amp-memorable-loopable-piano-song-by-gtg-319605.mp3" id="2_m4a3v"]
+[ext_resource type="AudioStream" uid="uid://kek6plulaq2t" path="res://Assets/Áudio/Efeitos sonoros/ambient_house-forest-park-with-wind-and-bird-calls-321622.mp3" id="3_rtxsl"]
+[ext_resource type="AudioStream" uid="uid://c4vchag20tow6" path="res://Assets/Áudio/Efeitos sonoros/soundreality-footsteps-walking-boots-parquet-1-420135.mp3" id="4_rtxsl"]
+[ext_resource type="AudioStream" uid="uid://nbwr86ay171m" path="res://Assets/Áudio/Efeitos sonoros/freesound_community-boiling-water-sound-62556.mp3" id="5_46b1v"]
+
+[node name="audioManager" type="Node" unique_id=1966760163]
+script = ExtResource("1_f1xp6")
+
+[node name="Clips" type="Node" parent="." unique_id=324840588]
+
+[node name="pianoMenu" type="AudioStreamPlayer" parent="Clips" unique_id=1085912348]
+stream = ExtResource("2_m4a3v")
+volume_db = -8.211
+parameters/looping = true
+
+[node name="forestMenu" type="AudioStreamPlayer" parent="Clips" unique_id=1840164289]
+stream = ExtResource("3_rtxsl")
+volume_db = -18.246
+parameters/looping = true
+
+[node name="walkingWood" type="AudioStreamPlayer" parent="Clips" unique_id=1149719163]
+stream = ExtResource("4_rtxsl")
+volume_db = -15.914
+parameters/looping = true
+
+[node name="waterBoil" type="AudioStreamPlayer" parent="Clips" unique_id=1207781171]
+stream = ExtResource("5_46b1v")
+volume_db = -13.542

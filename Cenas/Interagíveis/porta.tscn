@@ -77,6 +77,9 @@ size = Vector2(16, 16)
 [sub_resource type="CircleShape2D" id="CircleShape2D_s20dg"]
 radius = 21.189621
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jd3n0"]
+size = Vector2(2, 32)
+
 [node name="porta" type="Node2D" unique_id=942141203]
 y_sort_enabled = true
 script = ExtResource("1_wxqpq")
@@ -84,17 +87,26 @@ script = ExtResource("1_wxqpq")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1203726646]
 self_modulate = Color(1.2213017, 1.613483, 1.6197081, 1)
 texture_filter = 1
+position = Vector2(0, -16)
 sprite_frames = SubResource("SpriteFrames_s20dg")
-animation = &"closed"
+animation = &"open"
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=2092945127]
+position = Vector2(0, -16)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=595203433]
 position = Vector2(0, 8)
 shape = SubResource("RectangleShape2D_s20dg")
 
 [node name="InteractionArea" parent="." unique_id=1968524516 instance=ExtResource("2_b0sw6")]
+position = Vector2(0, -16)
 action_name = "interagir"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea" unique_id=1007042620]
 shape = SubResource("CircleShape2D_s20dg")
+
+[node name="open" type="StaticBody2D" parent="." unique_id=1922715034]
+
+[node name="collision_open" type="CollisionShape2D" parent="open" unique_id=125725113]
+position = Vector2(-7, -16)
+shape = SubResource("RectangleShape2D_jd3n0")

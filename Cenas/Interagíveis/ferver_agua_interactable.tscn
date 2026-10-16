@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://cg7pufpd4bxlm"]
+
+[ext_resource type="Script" uid="uid://epvgg0otq4pu" path="res://Scripts/ferver_agua_interactable.gd" id="1_14uvy"]
+[ext_resource type="PackedScene" uid="uid://qxc6y5vnc1g5" path="res://Cenas/Interações/INTERACTION_AREA/interaction_area.tscn" id="1_l2laj"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jd3n0"]
+radius = 21.023796
+
+[node name="ferver_agua_interactable" type="Node2D" unique_id=164915771]
+script = ExtResource("1_14uvy")
+
+[node name="InteractionArea" parent="." unique_id=1968524516 instance=ExtResource("1_l2laj")]
+action_name = "ferver a água"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea" unique_id=1871221027]
+shape = SubResource("CircleShape2D_jd3n0")
+
+[node name="barra_progresso" type="ProgressBar" parent="." unique_id=1175588879]
+z_index = 4
+texture_filter = 1
+offset_left = -20.0
+offset_top = -18.0
+offset_right = 19.0
+offset_bottom = -12.0
+show_percentage = false

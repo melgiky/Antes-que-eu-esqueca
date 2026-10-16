@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://coux8a042jodn"
+path="res://.godot/imported/spinopel-walking-on-grass-381887.mp3-95bb6dea1eaad763be1787299423bf71.mp3str"
+
+[deps]
+
+source_file="res://Assets/Áudio/Efeitos sonoros/spinopel-walking-on-grass-381887.mp3"
+dest_files=["res://.godot/imported/spinopel-walking-on-grass-381887.mp3-95bb6dea1eaad763be1787299423bf71.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

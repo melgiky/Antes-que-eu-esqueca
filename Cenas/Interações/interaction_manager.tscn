@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://byiuboyuos7f1"]
 
 [ext_resource type="Script" uid="uid://cwy1peo8r2hgs" path="res://Cenas/Interações/interaction_manager.gd" id="1_vi40a"]
-[ext_resource type="FontFile" uid="uid://dkp7fslkb71gj" path="res://Assets/Menu e UI/Papernotes.otf" id="2_0nohu"]
+[ext_resource type="FontFile" uid="uid://b1rmmejabkbd5" path="res://Assets/Menu e UI/Fontes/Papernotes-menu.otf" id="2_0nohu"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_0nohu"]
 font = ExtResource("2_0nohu")
 font_size = 8
 outline_size = 2
-outline_color = Color(0.22745098, 0.22745098, 0.3137255, 1)
+outline_color = Color(0.74543893, 0.38164076, 0, 1)
 shadow_size = 0
 
 [node name="InteractionManager" type="Node2D" unique_id=621936251]

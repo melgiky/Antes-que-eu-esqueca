@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://chfnfpuut8lvb"]
+
+[ext_resource type="Texture2D" uid="uid://bfplx413ul8ic" path="res://Assets/Menu e UI/imagens/5484e3a104c1e684aeb166302cf5cc68.jpg" id="1_6iwx6"]
+[ext_resource type="Script" uid="uid://dp0tfdndjukpr" path="res://Scripts/escovar_dentes.gd" id="1_67tua"]
+[ext_resource type="Texture2D" uid="uid://c75jrp57x4wfs" path="res://Assets/Menu e UI/imagens/icon.svg" id="2_67tua"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jd3n0"]
+size = Vector2(128, 128)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c3x7d"]
+size = Vector2(488, 136)
+
+[node name="escovar_dentes" type="Node2D" unique_id=1436451228]
+script = ExtResource("1_67tua")
+
+[node name="barra_progresso" type="ProgressBar" parent="." unique_id=1947713606]
+offset_left = -360.0
+offset_top = -312.0
+offset_right = -356.0
+offset_bottom = -285.0
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1364091254]
+
+[node name="boca" type="Sprite2D" parent="." unique_id=665342993]
+texture = ExtResource("1_6iwx6")
+
+[node name="escova" type="Sprite2D" parent="." unique_id=1718970375]
+position = Vector2(344, 216)
+texture = ExtResource("2_67tua")
+
+[node name="area_escova" type="Area2D" parent="escova" unique_id=461967026]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="escova/area_escova" unique_id=1005227402]
+shape = SubResource("RectangleShape2D_jd3n0")
+
+[node name="area_dentes" type="Area2D" parent="." unique_id=1546207198]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="area_dentes" unique_id=1455468645]
+position = Vector2(4, -4)
+shape = SubResource("RectangleShape2D_c3x7d")

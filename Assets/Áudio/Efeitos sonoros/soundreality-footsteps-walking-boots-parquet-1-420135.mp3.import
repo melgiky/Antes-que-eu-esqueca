@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c4vchag20tow6"
+path="res://.godot/imported/soundreality-footsteps-walking-boots-parquet-1-420135.mp3-1ff8b05408e96d1eba0354f35c273b36.mp3str"
+
+[deps]
+
+source_file="res://Assets/Áudio/Efeitos sonoros/soundreality-footsteps-walking-boots-parquet-1-420135.mp3"
+dest_files=["res://.godot/imported/soundreality-footsteps-walking-boots-parquet-1-420135.mp3-1ff8b05408e96d1eba0354f35c273b36.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,71 @@
+[gd_scene format=3 uid="uid://chfnfpuut8lvb"]
+
+[ext_resource type="Script" uid="uid://dp0tfdndjukpr" path="res://Scripts/escovar_dentes.gd" id="1_g63rm"]
+[ext_resource type="Texture2D" uid="uid://diqmriuv6g8b2" path="res://Assets/Menu e UI/imagens/bfb9de4d881927bc41ae1092bd10a4b7.jpg" id="2_6yob2"]
+[ext_resource type="FontFile" uid="uid://dytybk76cilrn" path="res://Assets/Menu e UI/Fontes/Fraunces/static/Fraunces_72pt-Black.ttf" id="3_q4dvf"]
+[ext_resource type="Texture2D" uid="uid://bfplx413ul8ic" path="res://Assets/Menu e UI/imagens/5484e3a104c1e684aeb166302cf5cc68.jpg" id="4_sb0hp"]
+[ext_resource type="Texture2D" uid="uid://c75jrp57x4wfs" path="res://Assets/Menu e UI/imagens/icon.svg" id="5_n53wk"]
+
+[sub_resource type="Gradient" id="Gradient_e2kdn"]
+offsets = PackedFloat32Array(0.43975905, 0.6626506)
+colors = PackedColorArray(0, 0, 0, 1, 0.7764706, 0.7764706, 0.7764706, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_s20dg"]
+gradient = SubResource("Gradient_e2kdn")
+fill = 1
+fill_from = Vector2(0.5043478, 0.50869566)
+fill_to = Vector2(1, 0.026086956)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jd3n0"]
+size = Vector2(128, 128)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c3x7d"]
+size = Vector2(488, 136)
+
+[node name="escovar_dentes" type="CanvasLayer" unique_id=421361577]
+script = ExtResource("1_g63rm")
+
+[node name="Conteudo" type="Node2D" parent="." unique_id=1041000549]
+position = Vector2(536, 344)
+
+[node name="background" type="Sprite2D" parent="Conteudo" unique_id=89190753]
+texture_filter = 1
+position = Vector2(0, -48)
+scale = Vector2(1.5199289, 1.257958)
+texture = ExtResource("2_6yob2")
+
+[node name="barra_progresso" type="ProgressBar" parent="Conteudo" unique_id=1947713606]
+offset_left = -512.0
+offset_top = -328.0
+offset_right = -348.0
+offset_bottom = -301.0
+theme_override_fonts/font = ExtResource("3_q4dvf")
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect" type="TextureRect" parent="Conteudo" unique_id=167093146]
+offset_left = 480.0
+offset_top = 400.0
+offset_right = 606.0233
+offset_bottom = 506.38586
+scale = Vector2(-7.530191, -7.530191)
+texture = SubResource("GradientTexture2D_s20dg")
+metadata/_edit_use_anchors_ = true
+
+[node name="boca" type="Sprite2D" parent="Conteudo" unique_id=665342993]
+visible = false
+texture = ExtResource("4_sb0hp")
+
+[node name="escova" type="Sprite2D" parent="Conteudo" unique_id=1718970375]
+position = Vector2(344, 216)
+texture = ExtResource("5_n53wk")
+
+[node name="area_escova" type="Area2D" parent="Conteudo/escova" unique_id=461967026]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Conteudo/escova/area_escova" unique_id=1005227402]
+shape = SubResource("RectangleShape2D_jd3n0")
+
+[node name="area_dentes" type="Area2D" parent="Conteudo" unique_id=1546207198]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Conteudo/area_dentes" unique_id=1455468645]
+position = Vector2(4, -4)
+shape = SubResource("RectangleShape2D_c3x7d")
