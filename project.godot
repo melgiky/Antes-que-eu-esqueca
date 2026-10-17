@@ -38,7 +38,7 @@ layout/style_directory={
 "estilo_teste": "res://dialogic/estilo_teste.tres"
 }
 variables={
-"PegouChave": false
+"escovou_dentes": false
 }
 layout/style_list=["res://dialogic/estilo_teste.tres"]
 layout/default_style=""
@@ -74,6 +74,7 @@ audio/channel_defaults={
 "volume": 0.0
 }
 }
+glossary/default_case_sensitive=true
 
 [display]
 

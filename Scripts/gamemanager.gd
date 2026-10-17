@@ -24,7 +24,7 @@ var objetivos = {
 		},
 				{
 			"id": "ir_jardim",
-			"texto":"Procure pela marta.",
+			"texto":"FIM DO PLAYTEST.",
 			"completo": false
 		}
 	],
