@@ -35,13 +35,14 @@ directories/dtl_directory={
 "segundoandar": "res://dialogic/segundoandar.dtl"
 }
 layout/style_directory={
-"estilo_teste": "res://dialogic/estilo_teste.tres"
+"": "res://New_File.tres",
+"New_File": "res://New_File.tres"
 }
 variables={
 "escovou_dentes": false
 }
-layout/style_list=["res://dialogic/estilo_teste.tres"]
-layout/default_style=""
+layout/style_list=["res://New_File.tres"]
+layout/default_style="res://New_File.tres"
 text/letter_speed=0.01
 text/initial_text_reveal_skippable=true
 text/text_reveal_skip_delay=0.1

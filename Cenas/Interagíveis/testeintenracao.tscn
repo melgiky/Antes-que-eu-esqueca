@@ -3,8 +3,9 @@
 [ext_resource type="Script" uid="uid://bcvhimjg058xv" path="res://Cenas/Interagíveis/escovar_dentes_interactable.gd" id="1_8qt2v"]
 [ext_resource type="PackedScene" uid="uid://qxc6y5vnc1g5" path="res://Cenas/Interações/INTERACTION_AREA/interaction_area.tscn" id="1_3414x"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_s20dg"]
-radius = 33.06055
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1ov5i"]
+radius = 11.0
+height = 40.0
 
 [node name="escovar_dentes_interactable" type="Node2D" unique_id=644009879]
 script = ExtResource("1_8qt2v")
@@ -15,4 +16,4 @@ visibility_layer = 2
 action_name = "interagir"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea" unique_id=2070906669]
-shape = SubResource("CircleShape2D_s20dg")
+shape = SubResource("CapsuleShape2D_1ov5i")
