@@ -35,7 +35,8 @@ func _finalizar_minigame_escovar() -> void:
 	print ("você escovou os dentes!")
 	if is_instance_valid(minigame_atual):
 		minigame_atual.queue_free()
-
+	queue_free()
+	
 	minigame_atual = null
 	player.can_move = true
 	interagindo = false

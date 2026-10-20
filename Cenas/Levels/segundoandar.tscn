@@ -8,7 +8,6 @@
 [ext_resource type="Texture2D" uid="uid://cfbjpje7ypqsm" path="res://Assets/Tilesets/tileset.png" id="4_fk34s"]
 [ext_resource type="Texture2D" uid="uid://bbpmrcxuq8fmy" path="res://Assets/Tilesets/Interiors_free_16x16.png" id="4_s1j02"]
 [ext_resource type="Texture2D" uid="uid://bx4qcpiega5dd" path="res://Assets/Tilesets/beds_BR.png" id="5_f5gnx"]
-[ext_resource type="PackedScene" uid="uid://btb6rdbg1jlau" path="res://Cenas/Interagíveis/testeintenracao.tscn" id="5_fk34s"]
 [ext_resource type="Texture2D" uid="uid://c4oqflju12hg" path="res://Assets/Tilesets/cabinets_BA.png" id="5_sa3xr"]
 [ext_resource type="PackedScene" uid="uid://qrveqc2vd6i5" path="res://Cenas/Outros/objectsUI.tscn" id="6_0tqxo"]
 [ext_resource type="Texture2D" uid="uid://dy6paprvvwfwi" path="res://Assets/Tilesets/wardrobes_BR.png" id="6_1ov5i"]
@@ -18,42 +17,88 @@
 [ext_resource type="Texture2D" uid="uid://6wry8xhv3ji" path="res://Assets/Tilesets/doorswindowsstairs_LRK.png" id="8_epeqd"]
 [ext_resource type="Texture2D" uid="uid://drvk5ftro2koy" path="res://Assets/Tilesets/floorswalls_LRK.png" id="10_i0rxa"]
 [ext_resource type="PackedScene" uid="uid://bbcmhjjegstui" path="res://Cenas/Interagíveis/porta.tscn" id="15_i0rxa"]
+[ext_resource type="PackedScene" uid="uid://cbxnnmhpy258w" path="res://Cenas/Interagíveis/escovar_dentes_interactable.tscn" id="19_y14ky"]
 
 [sub_resource type="GDScript" id="GDScript_p47ww"]
 script/source = "extends Node2D
 
 @onready var player: CharacterBody2D = $Ysort/Player
+@onready var spawn_cama: Marker2D = $SpawnCama
+@onready var spawn_escadas: Marker2D = $SpawnEscada
 
-# Called when the node enters the scene tree for the first time.
+var estado_cena: Dictionary = {}
+
+
 func _ready() -> void:
-	pass # Replace with function body.
-	iniciar_dialogo()
-	Dialogic.timeline_ended.connect(_dialogo_terminou)
+	# Recupera o estado salvo deste ambiente
+	estado_cena = GameManager.obter_estado_cena(
+		scene_file_path
+	)
 
+	# Define os valores iniciais na primeira visita
+	if estado_cena.is_empty():
+		estado_cena = {
+			\"dialogo_concluido\": false
+		}
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+	# Conecta o sinal antes de iniciar o diálogo
+	if not Dialogic.timeline_ended.is_connected(_dialogo_terminou):
+		Dialogic.timeline_ended.connect(_dialogo_terminou)
 
-
-
-func _on_area_2d_body_shape_entered(body_rid: RID, body: Node2D, body_shape_index: int, local_shape_index: int) -> void:
-	if body.is_in_group(\"player\"):
-		$Ysort/Player.can_move = false
-		Transitions.transition()
-		await Transitions.on_transition_finished
-		GameManager.completar_objetivo(\"descer_escada\")
-		get_tree().change_scene_to_file(\"res://Cenas/Levels/primeiroandar.tscn\")
+	# Só inicia o diálogo se ele ainda não terminou
+	if not estado_cena[\"dialogo_concluido\"]:
+		iniciar_dialogo()
+	else:
+		player.can_move = true
 	
-func iniciar_dialogo():
-	# Impede o Antônio de andar durante o diálogo
-	$Ysort/Player.can_move = false
+	if GameManager.proximo_spawn == \"SpawnEscadas\":
+		player.global_position = spawn_escadas.global_position
+	else:
+		player.global_position = spawn_cama.global_position
 
-	# Inicia a Timeline do Dialogic
+
+func iniciar_dialogo() -> void:
+	player.can_move = false
 	Dialogic.start(\"res://dialogic/segundoandar.dtl\")
 
-func _dialogo_terminou():
-	$Ysort/Player.can_move = true
+
+func _dialogo_terminou() -> void:
+	estado_cena[\"dialogo_concluido\"] = true
+
+	salvar_estado()
+
+	player.can_move = true
+
+
+func salvar_estado() -> void:
+	GameManager.salvar_estado_cena(
+		scene_file_path,
+		estado_cena
+	)
+
+
+func _on_area_2d_body_shape_entered(
+	body_rid: RID,
+	body: Node2D,
+	body_shape_index: int,
+	local_shape_index: int
+) -> void:
+	if not body.is_in_group(\"player\"):
+		return
+
+	player.can_move = false
+
+	# Salva antes de trocar de ambiente
+	salvar_estado()
+	GameManager.proximo_spawn = \"SpawnEscadas\"
+	Transitions.transition()
+	await Transitions.on_transition_finished
+
+	GameManager.completar_objetivo(\"descer_escada\")
+
+	get_tree().change_scene_to_file(
+		\"res://Cenas/Levels/primeiroandar.tscn\"
+	)
 "
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_l0ugd"]
@@ -8398,9 +8443,6 @@ position = Vector2(58, 426.96875)
 position = Vector2(35, -11.96875)
 shape = SubResource("CircleShape2D_s20dg")
 
-[node name="escovar_dentes_interactable" parent="." unique_id=644009879 instance=ExtResource("5_fk34s")]
-position = Vector2(336, 200)
-
 [node name="PointLight2D" type="PointLight2D" parent="." unique_id=1671577323]
 position = Vector2(423, 145)
 rotation = -1.5663074
@@ -8432,5 +8474,14 @@ texture = SubResource("GradientTexture2D_sa3xr")
 [node name="objectsUI" parent="." unique_id=1183710810 instance=ExtResource("6_0tqxo")]
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=305585291]
+
+[node name="SpawnEscada" type="Marker2D" parent="." unique_id=1610297614]
+position = Vector2(95, 387)
+
+[node name="SpawnCama" type="Marker2D" parent="." unique_id=54969962]
+position = Vector2(412, 170)
+
+[node name="escovar_dentes_interactable2" parent="." unique_id=63456553 instance=ExtResource("19_y14ky")]
+position = Vector2(314, 212)
 
 [connection signal="body_shape_entered" from="Area2D" to="." method="_on_area_2d_body_shape_entered"]

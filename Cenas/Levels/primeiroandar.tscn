@@ -4171,7 +4171,7 @@ tile_map_data = PackedByteArray("AAD5//z/AAABABEAAAD5//3/AAAFABEAAAD6//z/AAABABE
 tile_set = SubResource("TileSet_vl4rs")
 
 [node name="Player" parent="Ysort" unique_id=1053805525 instance=ExtResource("4_2hgg3")]
-position = Vector2(292, 205)
+position = Vector2(320, 205)
 
 [node name="decoracoeschao" type="TileMapLayer" parent="Ysort" unique_id=2090859687]
 y_sort_enabled = true

@@ -34,10 +34,7 @@ directories/dch_directory={
 directories/dtl_directory={
 "segundoandar": "res://dialogic/segundoandar.dtl"
 }
-layout/style_directory={
-"": "res://New_File.tres",
-"New_File": "res://New_File.tres"
-}
+layout/style_directory={}
 variables={
 "escovou_dentes": false
 }

@@ -76,3 +76,19 @@ func obter_objetivo_atual():
 		return null
 
 	return objetivos_atuais[indice_objetivo]
+
+
+
+# Estados guardados de cada ambiente
+
+var proximo_spawn := "SpawnCama"
+
+var estados_cenas: Dictionary = {}
+
+
+func salvar_estado_cena(caminho: String, estado: Dictionary) -> void:
+	estados_cenas[caminho] = estado.duplicate(true)
+
+
+func obter_estado_cena(caminho: String) -> Dictionary:
+	return estados_cenas.get(caminho, {}).duplicate(true)
