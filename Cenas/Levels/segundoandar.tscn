@@ -86,11 +86,18 @@ func _on_area_2d_body_shape_entered(
 	if not body.is_in_group(\"player\"):
 		return
 
+	# Verifica se o objetivo de escovar os dentes foi cumprido
+	if not GameManager.objetivo_completo(\"escovar_dentes\"):
+		player.can_move = false
+		Dialogic.start(\"descer_escada\")
+		return
+
 	player.can_move = false
 
 	# Salva antes de trocar de ambiente
 	salvar_estado()
 	GameManager.proximo_spawn = \"SpawnEscadas\"
+
 	Transitions.transition()
 	await Transitions.on_transition_finished
 
@@ -8346,13 +8353,16 @@ sources/3 = SubResource("TileSetAtlasSource_qlobi")
 sources/4 = SubResource("TileSetAtlasSource_biiby")
 sources/5 = SubResource("TileSetAtlasSource_q51lm")
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_s20dg"]
-radius = 14.3178215
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iak55"]
+size = Vector2(32, 17)
 
 [sub_resource type="Gradient" id="Gradient_i0rxa"]
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_sa3xr"]
 gradient = SubResource("Gradient_i0rxa")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eqrk4"]
+size = Vector2(48, 20)
 
 [node name="segundoandar" type="Node2D" unique_id=1591276173]
 script = SubResource("GDScript_p47ww")
@@ -8440,8 +8450,8 @@ y_sort_enabled = true
 position = Vector2(58, 426.96875)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=884942425]
-position = Vector2(35, -11.96875)
-shape = SubResource("CircleShape2D_s20dg")
+position = Vector2(38, -18.46875)
+shape = SubResource("RectangleShape2D_iak55")
 
 [node name="PointLight2D" type="PointLight2D" parent="." unique_id=1671577323]
 position = Vector2(423, 145)
@@ -8483,5 +8493,11 @@ position = Vector2(412, 170)
 
 [node name="escovar_dentes_interactable2" parent="." unique_id=63456553 instance=ExtResource("19_y14ky")]
 position = Vector2(314, 212)
+
+[node name="colisao_escada" type="StaticBody2D" parent="." unique_id=372228549]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="colisao_escada" unique_id=1468448967]
+position = Vector2(96, 414)
+shape = SubResource("RectangleShape2D_eqrk4")
 
 [connection signal="body_shape_entered" from="Area2D" to="." method="_on_area_2d_body_shape_entered"]

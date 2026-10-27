@@ -32,13 +32,14 @@ directories/dch_directory={
 "antonio": "res://dialogic/antonio.dch"
 }
 directories/dtl_directory={
+"descer_escada": "res://dialogic/descer_escada.dtl",
 "segundoandar": "res://dialogic/segundoandar.dtl"
 }
 layout/style_directory={}
 variables={
 "escovou_dentes": false
 }
-layout/style_list=["res://New_File.tres"]
+layout/style_list=[]
 layout/default_style="res://New_File.tres"
 text/letter_speed=0.01
 text/initial_text_reveal_skippable=true
