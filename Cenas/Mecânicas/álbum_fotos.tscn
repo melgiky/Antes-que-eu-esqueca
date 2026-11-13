@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://b8i5fade50wvt"]
+
+[sub_resource type="Gradient" id="Gradient_1ikrb"]
+colors = PackedColorArray(0, 0, 0, 0.08235294, 1, 1, 1, 0.15294118)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_s20dg"]
+gradient = SubResource("Gradient_1ikrb")
+
+[node name="álbum_fotos" type="Node2D" unique_id=302974767]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=891764430]
+offset_right = 1080.0
+offset_bottom = 736.0
+texture = SubResource("GradientTexture1D_s20dg")
+
+[node name="backpage" type="Panel" parent="." unique_id=1131992255]
+offset_left = 32.0
+offset_top = 32.0
+offset_right = 1046.0
+offset_bottom = 700.0
+
+[node name="page1" type="Panel" parent="backpage" unique_id=1080454000]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 504.0
+offset_bottom = 656.0
+
+[node name="page2" type="Panel" parent="backpage" unique_id=238681973]
+layout_mode = 0
+offset_left = 512.0
+offset_top = 16.0
+offset_right = 1000.0
+offset_bottom = 656.0
