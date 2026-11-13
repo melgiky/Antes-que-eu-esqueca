@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dejdhethcsnlh"
-path="res://.godot/imported/antonio.idle.costas..png-357095192cad55dbff390929e2bd1b97.ctex"
+uid="uid://c1k8bs2n7c0wh"
+path="res://.godot/imported/antonio.walk.costas. (1).png-e3b9b105608d4c411f866fd73f4f8afe.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Arte/Player Sprites/antonio.idle.costas..png"
-dest_files=["res://.godot/imported/antonio.idle.costas..png-357095192cad55dbff390929e2bd1b97.ctex"]
+source_file="res://Assets/Arte/Player Sprites Antonio/antonio.walk.costas. (1).png"
+dest_files=["res://.godot/imported/antonio.walk.costas. (1).png-e3b9b105608d4c411f866fd73f4f8afe.ctex"]
 
 [params]
 

@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://bdkhna0ym5k04"]
 
 [ext_resource type="Script" uid="uid://blpw5lbe7qmwf" path="res://Scripts/player.gd" id="1_r8ryd"]
-[ext_resource type="Texture2D" uid="uid://c381dgabc1w65" path="res://Assets/Arte/Player Sprites/Antonio.idle.frente.png" id="2_bsnao"]
-[ext_resource type="Texture2D" uid="uid://5lud8iymh6gh" path="res://Assets/Arte/Player Sprites/antonio.idle.lado..png" id="3_qhdav"]
-[ext_resource type="Texture2D" uid="uid://dejdhethcsnlh" path="res://Assets/Arte/Player Sprites/antonio.idle.costas..png" id="5_dah5n"]
-[ext_resource type="Texture2D" uid="uid://dmrp6qccb5nm0" path="res://Assets/Arte/Player Sprites/Antonio.walk.frente-sheet.png" id="6_4iq01"]
-[ext_resource type="Texture2D" uid="uid://uidd5ogwda7d" path="res://Assets/Arte/Player Sprites/antonio.walk.lado.png" id="6_xjvfg"]
-[ext_resource type="Texture2D" uid="uid://c1k8bs2n7c0wh" path="res://Assets/Arte/Player Sprites/antonio.walk.costas. (1).png" id="8_bsnao"]
+[ext_resource type="Texture2D" uid="uid://c381dgabc1w65" path="res://Assets/Arte/Player Sprites Antonio/Antonio.idle.frente.png" id="2_bsnao"]
+[ext_resource type="Texture2D" uid="uid://5lud8iymh6gh" path="res://Assets/Arte/Player Sprites Antonio/antonio.idle.lado..png" id="3_qhdav"]
+[ext_resource type="Texture2D" uid="uid://dejdhethcsnlh" path="res://Assets/Arte/Player Sprites Antonio/antonio.idle.costas..png" id="5_dah5n"]
+[ext_resource type="Texture2D" uid="uid://dmrp6qccb5nm0" path="res://Assets/Arte/Player Sprites Antonio/Antonio.walk.frente-sheet.png" id="6_4iq01"]
+[ext_resource type="Texture2D" uid="uid://uidd5ogwda7d" path="res://Assets/Arte/Player Sprites Antonio/antonio.walk.lado.png" id="6_xjvfg"]
+[ext_resource type="Texture2D" uid="uid://c1k8bs2n7c0wh" path="res://Assets/Arte/Player Sprites Antonio/antonio.walk.costas. (1).png" id="8_bsnao"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s20dg"]
 size = Vector2(10, 8)

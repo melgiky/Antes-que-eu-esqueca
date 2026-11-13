@@ -1,0 +1,92 @@
+[gd_scene format=3 uid="uid://clmlhpndve1xw"]
+
+[ext_resource type="Script" uid="uid://blpw5lbe7qmwf" path="res://Scripts/player.gd" id="1_t70m4"]
+[ext_resource type="Texture2D" uid="uid://bg76k3da676gi" path="res://Assets/Arte/Player Sprites Marta/marta de frente-sheet.png" id="2_t70m4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s20dg"]
+size = Vector2(10, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_808vi"]
+atlas = ExtResource("2_t70m4")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xgibl"]
+atlas = ExtResource("2_t70m4")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_30wuw"]
+atlas = ExtResource("2_t70m4")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gf1nt"]
+atlas = ExtResource("2_t70m4")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_24jgy"]
+atlas = ExtResource("2_t70m4")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ndmej"]
+atlas = ExtResource("2_t70m4")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gctnv"]
+atlas = ExtResource("2_t70m4")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cg07m"]
+atlas = ExtResource("2_t70m4")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xrivr"]
+animations = [{
+"frames": [{
+"duration": 0.8,
+"texture": SubResource("AtlasTexture_808vi")
+}, {
+"duration": 0.6,
+"texture": SubResource("AtlasTexture_xgibl")
+}, {
+"duration": 0.8,
+"texture": SubResource("AtlasTexture_30wuw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gf1nt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_24jgy")
+}, {
+"duration": 0.8,
+"texture": SubResource("AtlasTexture_ndmej")
+}, {
+"duration": 0.8,
+"texture": SubResource("AtlasTexture_gctnv")
+}, {
+"duration": 0.8,
+"texture": SubResource("AtlasTexture_cg07m")
+}],
+"loop": 1,
+"name": &"idle_down",
+"speed": 5.0
+}]
+
+[node name="Player Marta" type="CharacterBody2D" unique_id=1053805525 groups=["player"]]
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("1_t70m4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1428842599]
+position = Vector2(0, 9)
+shape = SubResource("RectangleShape2D_s20dg")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=308393543]
+zoom = Vector2(2.5, 2.5)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=247270514]
+texture_filter = 1
+position = Vector2(-1, 0)
+scale = Vector2(1, 0.9892578)
+sprite_frames = SubResource("SpriteFrames_xrivr")
+animation = &"idle_down"
+autoplay = "idle_down"
+frame_progress = 0.112415195

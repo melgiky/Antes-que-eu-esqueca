@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dmrp6qccb5nm0"
-path="res://.godot/imported/Antonio.walk.frente-sheet.png-4654a824299dc96eae0ddbd8a39cb424.ctex"
+uid="uid://bg76k3da676gi"
+path="res://.godot/imported/marta de frente-sheet.png-3f25c6fd06df820b70f4f9b5bf635f8b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Arte/Player Sprites/Antonio.walk.frente-sheet.png"
-dest_files=["res://.godot/imported/Antonio.walk.frente-sheet.png-4654a824299dc96eae0ddbd8a39cb424.ctex"]
+source_file="res://Assets/Arte/Player Sprites Marta/marta de frente-sheet.png"
+dest_files=["res://.godot/imported/marta de frente-sheet.png-3f25c6fd06df820b70f4f9b5bf635f8b.ctex"]
 
 [params]
 
