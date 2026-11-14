@@ -70,17 +70,12 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Player Marta" type="CharacterBody2D" unique_id=1053805525 groups=["player"]]
-collision_layer = 3
-collision_mask = 3
+[node name="Player Marta" type="Node2D" unique_id=1804190830 groups=["player"]]
 script = ExtResource("1_t70m4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1428842599]
 position = Vector2(0, 9)
 shape = SubResource("RectangleShape2D_s20dg")
-
-[node name="Camera2D" type="Camera2D" parent="." unique_id=308393543]
-zoom = Vector2(2.5, 2.5)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=247270514]
 texture_filter = 1

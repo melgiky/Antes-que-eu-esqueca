@@ -2963,4 +2963,4 @@ tile_set = SubResource("TileSet_syayu")
 position = Vector2(552, 240)
 
 [node name="Player Marta" parent="." unique_id=1827310301 instance=ExtResource("7_71t4b")]
-position = Vector2(727, 181)
+position = Vector2(786, 172)
