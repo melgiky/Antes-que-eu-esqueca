@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://cvqf7qi5my1l6"]
+
+[node name="menu_jogos" type="Node2D" unique_id=2053027263]
+
+[node name="fundo" type="Panel" parent="." unique_id=1229122015]
+offset_left = 35.0
+offset_top = 38.0
+offset_right = 1041.0
+offset_bottom = 687.0
+
+[node name="fundojogo1" type="Panel" parent="fundo" unique_id=1635812846]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 70.0
+offset_right = 469.0
+offset_bottom = 587.0
+
+[node name="fundojogo2" type="Panel" parent="fundo" unique_id=1408394704]
+layout_mode = 0
+offset_left = 523.0
+offset_top = 72.0
+offset_right = 928.0
+offset_bottom = 589.0
+
+[node name="Button" type="Button" parent="." unique_id=2119264978]
+offset_left = 121.0
+offset_top = 530.0
+offset_right = 482.0
+offset_bottom = 595.0
+text = "jogar"
+
+[node name="Button2" type="Button" parent="." unique_id=2044459236]
+offset_left = 592.0
+offset_top = 529.0
+offset_right = 924.0
+offset_bottom = 594.0
+text = "jogar"
+
+[node name="texto1" type="Label" parent="." unique_id=1488242089]
+offset_left = 250.0
+offset_top = 137.0
+offset_right = 354.0
+offset_bottom = 160.0
+text = "Jogo da Velha"
+
+[node name="texto2" type="Label" parent="." unique_id=1621379239]
+offset_left = 728.0
+offset_top = 138.0
+offset_right = 782.0
+offset_bottom = 161.0
+text = "Damas"

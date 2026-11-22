@@ -1,10 +1,15 @@
 [gd_scene format=3 uid="uid://b8i5fade50wvt"]
 
+[ext_resource type="Texture2D" uid="uid://bvqn6p5l0dh10" path="res://Assets/Menu e UI/imagens/polaroid.png" id="1_nefqx"]
+
 [sub_resource type="Gradient" id="Gradient_1ikrb"]
 colors = PackedColorArray(0, 0, 0, 0.08235294, 1, 1, 1, 0.15294118)
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_s20dg"]
 gradient = SubResource("Gradient_1ikrb")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_syayu"]
+size = Vector2(269, 238)
 
 [node name="álbum_fotos" type="Node2D" unique_id=302974767]
 
@@ -32,3 +37,67 @@ offset_left = 512.0
 offset_top = 16.0
 offset_right = 1000.0
 offset_bottom = 656.0
+
+[node name="moldura1" type="Sprite2D" parent="." unique_id=20412533]
+position = Vector2(332, 237.99998)
+rotation = -0.07485895
+scale = Vector2(0.367625, 0.31662503)
+texture = ExtResource("1_nefqx")
+
+[node name="clicavel_moldura1" type="Area2D" parent="moldura1" unique_id=1103885196]
+position = Vector2(-8.883667, -73.61865)
+rotation = 0.08686038
+scale = Vector2(2.72281, 3.1560287)
+skew = -0.022355437
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="moldura1/clicavel_moldura1" unique_id=1692826019]
+position = Vector2(5.5, -5.0000153)
+shape = SubResource("RectangleShape2D_syayu")
+
+[node name="moldura2" type="Sprite2D" parent="." unique_id=1812965449]
+position = Vector2(255.00003, 498)
+rotation = 0.06590112
+scale = Vector2(0.367625, 0.31662503)
+texture = ExtResource("1_nefqx")
+
+[node name="clicavel_moldura2" type="Area2D" parent="moldura2" unique_id=1490943015]
+position = Vector2(-8.883667, -73.61865)
+rotation = 0.08686038
+scale = Vector2(2.72281, 3.1560287)
+skew = -0.022355437
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="moldura2/clicavel_moldura2" unique_id=812168167]
+position = Vector2(5.5, -5.0000153)
+shape = SubResource("RectangleShape2D_syayu")
+
+[node name="moldura3" type="Sprite2D" parent="." unique_id=1700581717]
+position = Vector2(765, 238.00002)
+rotation = 0.003909331
+scale = Vector2(0.367625, 0.31662503)
+texture = ExtResource("1_nefqx")
+
+[node name="clicavel_moldura3" type="Area2D" parent="moldura3" unique_id=1718480365]
+position = Vector2(-8.883667, -73.61865)
+rotation = 0.08686038
+scale = Vector2(2.72281, 3.1560287)
+skew = -0.022355437
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="moldura3/clicavel_moldura3" unique_id=697371573]
+position = Vector2(5.5, -5.0000153)
+shape = SubResource("RectangleShape2D_syayu")
+
+[node name="moldura4" type="Sprite2D" parent="." unique_id=1450619490]
+position = Vector2(802, 502)
+rotation = 0.0834775
+scale = Vector2(0.367625, 0.31662503)
+texture = ExtResource("1_nefqx")
+
+[node name="clicavel_moldura4" type="Area2D" parent="moldura4" unique_id=369450114]
+position = Vector2(-8.883667, -73.61865)
+rotation = 0.08686038
+scale = Vector2(2.72281, 3.1560287)
+skew = -0.022355437
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="moldura4/clicavel_moldura4" unique_id=451310411]
+position = Vector2(5.5, -5.0000153)
+shape = SubResource("RectangleShape2D_syayu")

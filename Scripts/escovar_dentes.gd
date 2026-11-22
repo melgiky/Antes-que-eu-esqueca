@@ -18,6 +18,9 @@ var movimento_valido := false
 
 
 func _ready() -> void:
+	visible = true
+	set_process_input(true)
+
 	barra_progresso.min_value = 0
 	barra_progresso.max_value = 100
 	barra_progresso.value = 0

@@ -1,4 +1,4 @@
-[gd_scene format=4 uid="uid://qrveqc2vd6i5"]
+[gd_scene format=4 uid="uid://bcppra3sbss06"]
 
 [ext_resource type="Script" uid="uid://c05668ctuu25y" path="res://Scripts/puzzle/objectivesUI.gd" id="1_pk804"]
 [ext_resource type="Texture2D" uid="uid://d2brq6td668g4" path="res://Assets/Menu e UI/UI assets pack 2/UI books & more.png" id="2_1lj4k"]
@@ -934,7 +934,7 @@ font_color = Color(0.8190069, 0.40229297, 0, 1)
 [sub_resource type="LabelSettings" id="LabelSettings_epeqd"]
 font = ExtResource("3_hferg")
 
-[node name="CanvasGroup" type="CanvasLayer" unique_id=1183710810]
+[node name="objectivesUI" type="CanvasLayer" unique_id=1183710810]
 script = ExtResource("1_pk804")
 
 [node name="objetivos_aberto" type="Panel" parent="." unique_id=1853098379]

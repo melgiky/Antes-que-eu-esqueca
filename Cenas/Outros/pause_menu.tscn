@@ -1,0 +1,499 @@
+[gd_scene format=3 uid="uid://3usgjh0nibf2"]
+
+[ext_resource type="Texture2D" uid="uid://bj6vmw8tsvyni" path="res://Assets/Menu e UI/imagens/11994f16-96f7-42b7-aaa4-284fe4c97b49.png" id="1_ptx7r"]
+[ext_resource type="Script" uid="uid://dhinem0oejqf6" path="res://Scripts/pause_menu.gd" id="1_r8ke2"]
+[ext_resource type="Shader" uid="uid://bn14goluot4wc" path="res://Cenas/Outros/pause_menu.gdshader" id="2_xdc7u"]
+[ext_resource type="Texture2D" uid="uid://fseyd6unp0sc" path="res://Assets/Menu e UI/imagens/logosemestilhaços.png" id="3_r8ke2"]
+[ext_resource type="FontFile" uid="uid://1iqoc3tft3ho" path="res://Assets/Menu e UI/Fontes/Lora/static/Lora-Medium.ttf" id="4_xdc7u"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_syayu"]
+shader = ExtResource("2_xdc7u")
+shader_parameter/blur_radius = 3.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vcdrd"]
+shader = ExtResource("2_xdc7u")
+shader_parameter/blur_radius = 3.0
+
+[sub_resource type="QuadMesh" id="QuadMesh_syayu"]
+
+[sub_resource type="Animation" id="Animation_r8ke2"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-316, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Panel:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-4, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("blur:modulate:r")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("blur:modulate:g")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("blur:modulate:b")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("blur:modulate:a")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_sukqm"]
+resource_name = "blur_in"
+length = 0.7
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("blur:modulate:r")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 2),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.11666667, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.7)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("blur:modulate:g")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 2),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.11666667, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.7)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("blur:modulate:b")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 2),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.11666667, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.7)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("blur:modulate:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 2),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1, -0.11666667, -0.16666667, 0, 0),
+"times": PackedFloat32Array(0, 0.7)
+}
+
+[sub_resource type="Animation" id="Animation_xdi1x"]
+resource_name = "blur_out"
+length = 0.7
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("blur:modulate:r")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 2),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.11666667, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.7)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("blur:modulate:g")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 2),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.11666667, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.7)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("blur:modulate:b")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 2),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.11666667, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.7)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("blur:modulate:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 2),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 0, -0.11666667, 0.16666667, 0, 0),
+"times": PackedFloat32Array(0, 0.7)
+}
+
+[sub_resource type="Animation" id="Animation_xdc7u"]
+resource_name = "pausing"
+length = 0.7
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(-316, -0.25, 0, 0.25, 0, 0, -0.16833334, -52.666664, 0, 0),
+"times": PackedFloat32Array(0, 0.7)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Panel:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(-4, -0.25, 0, 0.25, 0, 0, -0.16833334, -0.6666667, 0, 0),
+"times": PackedFloat32Array(0, 0.7)
+}
+
+[sub_resource type="Animation" id="Animation_02bbp"]
+resource_name = "unpausing"
+length = 0.7
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 2),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, -328, -0.115, 54.666668, 0, 0),
+"times": PackedFloat32Array(0, 0.69)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Panel:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 2),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.115, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.69)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_sukqm"]
+_data = {
+&"RESET": SubResource("Animation_r8ke2"),
+&"blur_in": SubResource("Animation_sukqm"),
+&"blur_out": SubResource("Animation_xdi1x"),
+&"pausing": SubResource("Animation_xdc7u"),
+&"unpausing": SubResource("Animation_02bbp")
+}
+
+[sub_resource type="Animation" id="Animation_w8wv8"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../blur:modulate:r")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../blur:modulate:g")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../blur:modulate:b")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../blur:modulate:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_i0b0v"]
+resource_name = "blur_in"
+length = 0.7
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../blur:modulate:r")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 2),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.11666667, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.7)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../blur:modulate:g")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 2),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.11666667, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.7)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../blur:modulate:b")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 2),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.11666667, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.7)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../blur:modulate:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 2),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1, -0.11666667, -0.16666667, 0, 0),
+"times": PackedFloat32Array(0, 0.7)
+}
+
+[sub_resource type="Animation" id="Animation_llfw6"]
+resource_name = "blur_out"
+length = 0.7
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../blur:modulate:r")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 2),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.11666667, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.7)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../blur:modulate:g")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 2),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.11666667, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.7)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../blur:modulate:b")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 2),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.11666667, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.7)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../blur:modulate:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 2),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 0, -0.11666667, 0.16666667, 0, 0),
+"times": PackedFloat32Array(0, 0.7)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_a6orp"]
+_data = {
+&"RESET": SubResource("Animation_w8wv8"),
+&"blur_in": SubResource("Animation_i0b0v"),
+&"blur_out": SubResource("Animation_llfw6")
+}
+
+[node name="pause_menu" type="CanvasLayer" unique_id=1739995433]
+process_mode = 3
+script = ExtResource("1_r8ke2")
+
+[node name="blur" type="ColorRect" parent="." unique_id=1403905377]
+modulate = Color(1, 1, 1, 0)
+material = SubResource("ShaderMaterial_syayu")
+use_parent_material = true
+anchors_preset = -1
+anchor_left = -0.36018518
+anchor_top = -1.4777777
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="cacos" type="Sprite2D" parent="." unique_id=774047244]
+visible = false
+modulate = Color(1, 1, 1, 0.25882354)
+scale = Vector2(0.7640977, 0.7640977)
+texture = ExtResource("1_ptx7r")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=1303372961]
+material = SubResource("ShaderMaterial_vcdrd")
+position = Vector2(-660, -138)
+rotation = -3.1415925
+scale = Vector2(21.927124, -59.310413)
+mesh = SubResource("QuadMesh_syayu")
+
+[node name="Panel" type="Panel" parent="." unique_id=553247359]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -856.0
+offset_top = -364.0
+offset_right = -534.9998
+offset_bottom = 364.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="logo" type="Sprite2D" parent="Panel" unique_id=2095851838]
+position = Vector2(162, 126)
+scale = Vector2(0.39116135, 0.38850662)
+texture = ExtResource("3_r8ke2")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel" unique_id=895570692]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -136.0
+offset_top = -179.5
+offset_right = 136.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1, 0.977934)
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="continuar" type="Button" parent="Panel/VBoxContainer" unique_id=1896359328]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_xdc7u")
+theme_override_font_sizes/font_size = 23
+text = " Continuar"
+alignment = 0
+
+[node name="salvar" type="Button" parent="Panel/VBoxContainer" unique_id=65937417]
+use_parent_material = true
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_xdc7u")
+theme_override_font_sizes/font_size = 23
+text = " Salvar Jogo"
+alignment = 0
+
+[node name="opcoes" type="Button" parent="Panel/VBoxContainer" unique_id=1803699384]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_xdc7u")
+theme_override_font_sizes/font_size = 23
+text = " Opções"
+alignment = 0
+
+[node name="sair" type="Button" parent="Panel/VBoxContainer" unique_id=1427374767]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_xdc7u")
+theme_override_font_sizes/font_size = 23
+text = " Sair"
+alignment = 0
+
+[node name="animacoes_pausa" type="AnimationPlayer" parent="." unique_id=1327196857]
+libraries/ = SubResource("AnimationLibrary_sukqm")
+
+[node name="animacoes_blur" type="AnimationPlayer" parent="." unique_id=510275095]
+root_node = NodePath("../animacoes_pausa")
+libraries/ = SubResource("AnimationLibrary_a6orp")
+
+[connection signal="pressed" from="Panel/VBoxContainer/continuar" to="." method="_on_continuar_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/salvar" to="." method="_on_salvar_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/opcoes" to="." method="_on_opcoes_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/sair" to="." method="_on_sair_pressed"]

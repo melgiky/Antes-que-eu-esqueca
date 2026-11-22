@@ -9,7 +9,6 @@
 [ext_resource type="Texture2D" uid="uid://bbpmrcxuq8fmy" path="res://Assets/Tilesets/Interiors_free_16x16.png" id="4_s1j02"]
 [ext_resource type="Texture2D" uid="uid://bx4qcpiega5dd" path="res://Assets/Tilesets/beds_BR.png" id="5_f5gnx"]
 [ext_resource type="Texture2D" uid="uid://c4oqflju12hg" path="res://Assets/Tilesets/cabinets_BA.png" id="5_sa3xr"]
-[ext_resource type="PackedScene" uid="uid://qrveqc2vd6i5" path="res://Cenas/Outros/objectsUI.tscn" id="6_0tqxo"]
 [ext_resource type="Texture2D" uid="uid://dy6paprvvwfwi" path="res://Assets/Tilesets/wardrobes_BR.png" id="6_1ov5i"]
 [ext_resource type="Texture2D" uid="uid://dv4fj1746qljv" path="res://Assets/Tilesets/cabinets_LRK.png" id="6_i0rxa"]
 [ext_resource type="Texture2D" uid="uid://b6u5xh425ucnn" path="res://Assets/Tilesets/Bathroom_Demo.png" id="7_1ov5i"]
@@ -17,6 +16,8 @@
 [ext_resource type="Texture2D" uid="uid://6wry8xhv3ji" path="res://Assets/Tilesets/doorswindowsstairs_LRK.png" id="8_epeqd"]
 [ext_resource type="Texture2D" uid="uid://drvk5ftro2koy" path="res://Assets/Tilesets/floorswalls_LRK.png" id="10_i0rxa"]
 [ext_resource type="PackedScene" uid="uid://bbcmhjjegstui" path="res://Cenas/Interagíveis/porta.tscn" id="15_i0rxa"]
+[ext_resource type="PackedScene" uid="uid://cph7mr5vpmb6c" path="res://Cenas/Outros/objectives_ui.tscn" id="17_y14ky"]
+[ext_resource type="PackedScene" uid="uid://3usgjh0nibf2" path="res://Cenas/Outros/pause_menu.tscn" id="19_1lgs7"]
 [ext_resource type="PackedScene" uid="uid://cbxnnmhpy258w" path="res://Cenas/Interagíveis/escovar_dentes_interactable.tscn" id="19_y14ky"]
 
 [sub_resource type="GDScript" id="GDScript_p47ww"]
@@ -8675,7 +8676,7 @@ scale = Vector2(0.77812177, -0.49745014)
 color = Color(0.7570758, 0.52365226, 0.196753, 1)
 texture = SubResource("GradientTexture2D_sa3xr")
 
-[node name="objectsUI" parent="." unique_id=1183710810 instance=ExtResource("6_0tqxo")]
+[node name="objectivesUI" parent="." unique_id=1183710810 instance=ExtResource("17_y14ky")]
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=305585291]
 
@@ -8693,5 +8694,8 @@ position = Vector2(314, 212)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="colisao_escada" unique_id=1468448967]
 position = Vector2(96, 414)
 shape = SubResource("RectangleShape2D_eqrk4")
+
+[node name="pause_menu" parent="." unique_id=1739995433 instance=ExtResource("19_1lgs7")]
+layer = 10
 
 [connection signal="body_shape_entered" from="Area2D" to="." method="_on_area_2d_body_shape_entered"]
