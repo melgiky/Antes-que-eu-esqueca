@@ -12,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://dv4fj1746qljv" path="res://Assets/Tilesets/cabinets_LRK.png" id="9_g85pv"]
 [ext_resource type="Texture2D" uid="uid://bij05n6sgvy75" path="res://Assets/Tilesets/decorations_BR.png" id="10_6ia82"]
 [ext_resource type="Texture2D" uid="uid://6wry8xhv3ji" path="res://Assets/Tilesets/doorswindowsstairs_LRK.png" id="11_317ro"]
-[ext_resource type="PackedScene" uid="uid://qrveqc2vd6i5" path="res://Cenas/Outros/objectsUI.tscn" id="13_2kfji"]
+[ext_resource type="PackedScene" uid="uid://bcppra3sbss06" path="res://Cenas/Outros/objectsUI.tscn" id="13_2kfji"]
 [ext_resource type="PackedScene" uid="uid://cg7pufpd4bxlm" path="res://Cenas/Interagíveis/ferver_agua_interactable.tscn" id="14_u4sc7"]
 [ext_resource type="Texture2D" uid="uid://16kw3ibc3okq" path="res://Assets/Arte/Cocota Sprites/cocota.png" id="15_orv1e"]
 
