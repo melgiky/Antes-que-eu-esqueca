@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://dt80gurwrcgpu"]
+
+[ext_resource type="Texture2D" uid="uid://msplp23616" path="res://Assets/Menu e UI/cross.png" id="1_xo0e3"]
+
+[node name="Cross" type="Node2D" unique_id=50678617]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1345630412]
+texture = ExtResource("1_xo0e3")
