@@ -924,8 +924,8 @@ texture = ExtResource("1_jlyqv")
 [sub_resource type="TileSet" id="TileSet_s20dg"]
 sources/0 = SubResource("TileSetAtlasSource_0s03u")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_syayu"]
-size = Vector2(269, 238)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s20dg"]
+size = Vector2(786.82086, 933.2378)
 
 [node name="álbum_fotos" type="Node2D" unique_id=302974767]
 script = ExtResource("1_jalsx")
@@ -944,15 +944,11 @@ rotation = 0.0056788176
 scale = Vector2(0.31977293, 0.2754114)
 texture = ExtResource("1_nefqx")
 
-[node name="clicavel_moldura1" type="Area2D" parent="moldura1" unique_id=1103885196]
-position = Vector2(-8.883667, -73.61865)
-rotation = 0.08686038
-scale = Vector2(2.72281, 3.1560287)
-skew = -0.022355437
+[node name="Area2D" type="Area2D" parent="moldura1" unique_id=1683063121]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="moldura1/clicavel_moldura1" unique_id=1692826019]
-position = Vector2(5.5, -5.0000153)
-shape = SubResource("RectangleShape2D_syayu")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="moldura1/Area2D" unique_id=2080057332]
+position = Vector2(2.6740723, 0.62957764)
+shape = SubResource("RectangleShape2D_s20dg")
 
 [node name="moldura2" type="Sprite2D" parent="." unique_id=1812965449]
 position = Vector2(205, 482)
@@ -960,15 +956,11 @@ rotation = 0.0012815371
 scale = Vector2(0.31977293, 0.2754114)
 texture = ExtResource("1_nefqx")
 
-[node name="clicavel_moldura2" type="Area2D" parent="moldura2" unique_id=1490943015]
-position = Vector2(-8.883667, -73.61865)
-rotation = 0.08686038
-scale = Vector2(2.72281, 3.1560287)
-skew = -0.022355437
+[node name="Area2D" type="Area2D" parent="moldura2" unique_id=747833843]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="moldura2/clicavel_moldura2" unique_id=812168167]
-position = Vector2(5.5, -5.0000153)
-shape = SubResource("RectangleShape2D_syayu")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="moldura2/Area2D" unique_id=1005594846]
+position = Vector2(2.6740723, 0.62957764)
+shape = SubResource("RectangleShape2D_s20dg")
 
 [node name="moldura3" type="Sprite2D" parent="." unique_id=1700581717]
 position = Vector2(731.00006, 203.00003)
@@ -976,15 +968,11 @@ rotation = 0.003909331
 scale = Vector2(0.31977293, 0.2754114)
 texture = ExtResource("1_nefqx")
 
-[node name="clicavel_moldura3" type="Area2D" parent="moldura3" unique_id=1718480365]
-position = Vector2(-8.883667, -73.61865)
-rotation = 0.08686038
-scale = Vector2(2.72281, 3.1560287)
-skew = -0.022355437
+[node name="Area2D" type="Area2D" parent="moldura3" unique_id=684530312]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="moldura3/clicavel_moldura3" unique_id=697371573]
-position = Vector2(5.5, -5.0000153)
-shape = SubResource("RectangleShape2D_syayu")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="moldura3/Area2D" unique_id=964150393]
+position = Vector2(2.6740723, 0.62957764)
+shape = SubResource("RectangleShape2D_s20dg")
 
 [node name="moldura4" type="Sprite2D" parent="." unique_id=1450619490]
 position = Vector2(865.00006, 487.00003)
@@ -992,15 +980,11 @@ rotation = -0.0004634261
 scale = Vector2(0.31977293, 0.2754114)
 texture = ExtResource("1_nefqx")
 
-[node name="clicavel_moldura4" type="Area2D" parent="moldura4" unique_id=369450114]
-position = Vector2(-8.883667, -73.61865)
-rotation = 0.08686038
-scale = Vector2(2.72281, 3.1560287)
-skew = -0.022355437
+[node name="Area2D" type="Area2D" parent="moldura4" unique_id=181536366]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="moldura4/clicavel_moldura4" unique_id=451310411]
-position = Vector2(5.5, -5.0000153)
-shape = SubResource("RectangleShape2D_syayu")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="moldura4/Area2D" unique_id=1315655988]
+position = Vector2(2.6740723, 0.62957764)
+shape = SubResource("RectangleShape2D_s20dg")
 
 [node name="TextureButton" type="TextureButton" parent="." unique_id=2115937304]
 offset_left = 954.99994

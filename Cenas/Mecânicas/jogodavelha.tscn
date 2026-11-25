@@ -1844,7 +1844,7 @@ font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_jd3n0"]
 font = ExtResource("8_dfntq")
-font_size = 38
+font_size = 42
 font_color = Color(0.91517544, 0.49999064, 0, 1)
 
 [node name="jogodavelha" type="Node2D" unique_id=1248078386]
@@ -1909,10 +1909,10 @@ label_settings = SubResource("LabelSettings_s20dg")
 horizontal_alignment = 1
 
 [node name="title" type="Label" parent="." unique_id=683037271]
-offset_left = -409.0
+offset_left = -424.0
 offset_top = -264.0
-offset_right = -95.0
-offset_bottom = -216.0
+offset_right = -78.0
+offset_bottom = -211.0
 text = "JOGO DA VELHA"
 label_settings = SubResource("LabelSettings_jd3n0")
 

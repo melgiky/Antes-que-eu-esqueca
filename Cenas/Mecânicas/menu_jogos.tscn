@@ -1,11 +1,17 @@
 [gd_scene format=4 uid="uid://cvqf7qi5my1l6"]
 
 [ext_resource type="Texture2D" uid="uid://cffqplbcv4nbl" path="res://Assets/Menu e UI/table-bg.jpg" id="1_1gr7n"]
-[ext_resource type="Texture2D" uid="uid://b6qh2bx4tlt43" path="res://Assets/Menu e UI/botao-tabuleiro-normal.png" id="1_h4o06"]
-[ext_resource type="Texture2D" uid="uid://copkohymf7oo2" path="res://Assets/Menu e UI/botao-tabuleiro-hover.png" id="2_1gr7n"]
-[ext_resource type="FontFile" uid="uid://4gsofqjnfmm3" path="res://Assets/Menu e UI/Fontes/Fraunces/static/Fraunces_72pt_Soft-Light.ttf" id="2_6mhrr"]
-[ext_resource type="FontFile" uid="uid://b3mydeqrcubaj" path="res://Assets/Menu e UI/Fontes/Fraunces/static/Fraunces_72pt-BlackItalic.ttf" id="4_8evs0"]
+[ext_resource type="Script" uid="uid://bhykr33gnufph" path="res://Scripts/menu_jogos.gd" id="1_gwr2j"]
+[ext_resource type="FontFile" uid="uid://bynvo0b5ununm" path="res://Assets/Menu e UI/Fontes/Fraunces/Fraunces-Italic-VariableFont_SOFT,WONK,opsz,wght.ttf" id="3_pxi6w"]
+[ext_resource type="Texture2D" uid="uid://cmyox3ndyfg53" path="res://Assets/Menu e UI/caderno-normal.png" id="4_gwr2j"]
 [ext_resource type="FontFile" uid="uid://cv8h42tfan523" path="res://Assets/Menu e UI/Fontes/Lora/static/Lora-MediumItalic.ttf" id="5_4nujs"]
+[ext_resource type="Texture2D" uid="uid://4hv2t1m0bw7n" path="res://Assets/Menu e UI/caderno-hover.png" id="5_grs0w"]
+[ext_resource type="Texture2D" uid="uid://cwfp4rgk1n7c7" path="res://Assets/Menu e UI/tabuleiro-normal.png" id="6_5i8rv"]
+[ext_resource type="Texture2D" uid="uid://tivfcsybogbb" path="res://Assets/Menu e UI/tabuleiro-hover.png" id="7_7j8hw"]
+[ext_resource type="Texture2D" uid="uid://cedc55j82cfmj" path="res://Assets/Menu e UI/peça-preta.png" id="9_7j8hw"]
+[ext_resource type="Texture2D" uid="uid://lsm2cj8lfi7m" path="res://Assets/Menu e UI/peça-branca.png" id="10_1exfd"]
+[ext_resource type="Texture2D" uid="uid://msplp23616" path="res://Assets/Menu e UI/cross.png" id="12_grs0w"]
+[ext_resource type="Texture2D" uid="uid://bt2kodbhr3um6" path="res://Assets/Menu e UI/circle.png" id="13_8tvlu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8evs0"]
 texture = ExtResource("1_1gr7n")
@@ -915,24 +921,22 @@ texture_region_size = Vector2i(64, 64)
 sources/0 = SubResource("TileSetAtlasSource_8evs0")
 
 [sub_resource type="LabelSettings" id="LabelSettings_rqve8"]
-font = ExtResource("2_6mhrr")
-font_size = 50
-
-[sub_resource type="LabelSettings" id="LabelSettings_6mhrr"]
-font = ExtResource("4_8evs0")
-font_size = 60
-font_color = Color(1, 1, 0.003921569, 1)
-outline_size = 12
+font = ExtResource("3_pxi6w")
+font_size = 53
+font_color = Color(0.25490198, 0.003921569, 0, 1)
+shadow_size = 0
 
 [sub_resource type="LabelSettings" id="LabelSettings_4nujs"]
-font = ExtResource("2_6mhrr")
+font = ExtResource("3_pxi6w")
 font_size = 55
+font_color = Color(0.1704211, 0.080736734, 0.035912663, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_vcdrd"]
 font = ExtResource("5_4nujs")
 font_size = 31
 
 [node name="menu_jogos" type="Node2D" unique_id=2053027263]
+script = ExtResource("1_gwr2j")
 
 [node name="Background" type="TileMapLayer" parent="." unique_id=2039429175]
 texture_filter = 1
@@ -944,62 +948,44 @@ tile_set = SubResource("TileSet_4nujs")
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1998268128]
 
 [node name="Label" type="Label" parent="." unique_id=1565772746]
-offset_left = -399.0
-offset_top = -324.0
-offset_right = -119.0
-offset_bottom = -262.0
+visible = false
+offset_left = -475.00003
+offset_top = -307.0
+offset_right = -109.00003
+offset_bottom = -238.0
 text = "Jogo da velha"
 label_settings = SubResource("LabelSettings_rqve8")
-
-[node name="TextureButton1" type="TextureButton" parent="." unique_id=428606222]
-offset_left = -542.00006
-offset_top = -322.0
-offset_right = 97.99994
-offset_bottom = 398.0
-scale = Vector2(0.8973157, 0.8973157)
-texture_normal = ExtResource("1_h4o06")
-texture_pressed = ExtResource("2_1gr7n")
-texture_hover = ExtResource("2_1gr7n")
-
-[node name="jogar2" type="Label" parent="TextureButton1" unique_id=1637006871]
-layout_mode = 0
-offset_left = 237.37476
-offset_top = 290.86755
-offset_right = 419.37476
-offset_bottom = 365.86755
-rotation = 0.17731424
-text = "Jogar!"
-label_settings = SubResource("LabelSettings_6mhrr")
+horizontal_alignment = 1
 
 [node name="title2" type="Label" parent="." unique_id=1754395549]
-offset_left = 190.0
-offset_top = -327.0
-offset_right = 358.0
-offset_bottom = -258.0
+visible = false
+offset_left = 119.99997
+offset_top = -316.0
+offset_right = 314.99997
+offset_bottom = -247.0
 text = "Damas"
 label_settings = SubResource("LabelSettings_4nujs")
 horizontal_alignment = 1
 
-[node name="TextureButton2" type="TextureButton" parent="title2" unique_id=976647370]
-layout_mode = 0
-offset_left = -207.0
-offset_top = 7.0
-offset_right = 433.0
-offset_bottom = 727.0
-scale = Vector2(0.8973157, 0.8973157)
-texture_normal = ExtResource("1_h4o06")
-texture_pressed = ExtResource("2_1gr7n")
-texture_hover = ExtResource("2_1gr7n")
+[node name="jogo_da_velha" type="TextureButton" parent="." unique_id=428606222]
+offset_left = -537.0
+offset_top = -299.0
+offset_right = 103.0
+offset_bottom = 421.0
+scale = Vector2(0.7434406, 0.7434406)
+texture_normal = ExtResource("4_gwr2j")
+texture_pressed = ExtResource("5_grs0w")
+texture_hover = ExtResource("5_grs0w")
 
-[node name="jogar2" type="Label" parent="title2/TextureButton2" unique_id=1621379239]
-layout_mode = 0
-offset_left = 251.8623
-offset_top = 289.75305
-offset_right = 433.8623
-offset_bottom = 364.75305
-rotation = 0.17731424
-text = "Jogar!"
-label_settings = SubResource("LabelSettings_6mhrr")
+[node name="damas" type="TextureButton" parent="." unique_id=976647370]
+offset_left = -60.000034
+offset_top = -342.0
+offset_right = 579.99994
+offset_bottom = 378.0
+scale = Vector2(0.8973157, 0.8973157)
+texture_normal = ExtResource("6_5i8rv")
+texture_pressed = ExtResource("7_7j8hw")
+texture_hover = ExtResource("7_7j8hw")
 
 [node name="Panel" type="Panel" parent="." unique_id=1386143805]
 anchors_preset = -1
@@ -1016,3 +1002,129 @@ offset_right = 1245.0
 offset_bottom = 56.0
 text = "Selecione um jogo e clique para jogar!"
 label_settings = SubResource("LabelSettings_vcdrd")
+
+[node name="peças" type="Node2D" parent="." unique_id=1037790216]
+position = Vector2(-43.00003, -22)
+
+[node name="PeçaPreta" type="Sprite2D" parent="peças" unique_id=9173408]
+position = Vector2(125, -202)
+scale = Vector2(0.18833338, 0.18833338)
+texture = ExtResource("9_7j8hw")
+
+[node name="PeçaBranca" type="Sprite2D" parent="peças" unique_id=2076097835]
+position = Vector2(68, 142)
+scale = Vector2(0.18833329, 0.18833329)
+texture = ExtResource("10_1exfd")
+
+[node name="PeçaPreta2" type="Sprite2D" parent="peças" unique_id=1189103574]
+position = Vector2(239.25, -202)
+scale = Vector2(0.18833338, 0.18833338)
+texture = ExtResource("9_7j8hw")
+
+[node name="PeçaBranca2" type="Sprite2D" parent="peças" unique_id=2134836225]
+position = Vector2(182.25, 142)
+scale = Vector2(0.18833329, 0.18833329)
+texture = ExtResource("10_1exfd")
+
+[node name="PeçaPreta3" type="Sprite2D" parent="peças" unique_id=967382270]
+position = Vector2(353.25, -202)
+scale = Vector2(0.18833338, 0.18833338)
+texture = ExtResource("9_7j8hw")
+
+[node name="PeçaBranca3" type="Sprite2D" parent="peças" unique_id=241943489]
+position = Vector2(296.25, 142)
+scale = Vector2(0.18833329, 0.18833329)
+texture = ExtResource("10_1exfd")
+
+[node name="PeçaPreta4" type="Sprite2D" parent="peças" unique_id=1402084200]
+position = Vector2(469.25, -202)
+scale = Vector2(0.18833338, 0.18833338)
+texture = ExtResource("9_7j8hw")
+
+[node name="PeçaBranca4" type="Sprite2D" parent="peças" unique_id=1694520212]
+position = Vector2(412.25, 142)
+scale = Vector2(0.18833329, 0.18833329)
+texture = ExtResource("10_1exfd")
+
+[node name="PeçaPreta5" type="Sprite2D" parent="peças" unique_id=1470852420]
+position = Vector2(181.25, -146.75)
+scale = Vector2(0.18833338, 0.18833338)
+texture = ExtResource("9_7j8hw")
+
+[node name="PeçaBranca5" type="Sprite2D" parent="peças" unique_id=505949412]
+position = Vector2(124.25, 197.25)
+scale = Vector2(0.18833329, 0.18833329)
+texture = ExtResource("10_1exfd")
+
+[node name="PeçaPreta6" type="Sprite2D" parent="peças" unique_id=362480913]
+position = Vector2(296.25, -146.75)
+scale = Vector2(0.18833338, 0.18833338)
+texture = ExtResource("9_7j8hw")
+
+[node name="PeçaBranca6" type="Sprite2D" parent="peças" unique_id=1282221466]
+position = Vector2(239.25, 197.25)
+scale = Vector2(0.18833329, 0.18833329)
+texture = ExtResource("10_1exfd")
+
+[node name="PeçaPreta7" type="Sprite2D" parent="peças" unique_id=1340739971]
+position = Vector2(411.25, -144.75)
+scale = Vector2(0.18833338, 0.18833338)
+texture = ExtResource("9_7j8hw")
+
+[node name="PeçaBranca7" type="Sprite2D" parent="peças" unique_id=682726749]
+position = Vector2(354.25, 199.25)
+scale = Vector2(0.18833329, 0.18833329)
+texture = ExtResource("10_1exfd")
+
+[node name="PeçaPreta8" type="Sprite2D" parent="peças" unique_id=1817860892]
+position = Vector2(68.00001, -144)
+scale = Vector2(0.18833338, 0.18833338)
+texture = ExtResource("9_7j8hw")
+
+[node name="PeçaBranca8" type="Sprite2D" parent="peças" unique_id=309688718]
+position = Vector2(469, 199.25)
+scale = Vector2(0.18833329, 0.18833329)
+texture = ExtResource("10_1exfd")
+
+[node name="velha" type="Node" parent="." unique_id=213501625]
+
+[node name="x1" type="Sprite2D" parent="velha" unique_id=462486072]
+modulate = Color(0.25541812, 0.12693429, 0.055937126, 1)
+position = Vector2(-285.00006, -36)
+scale = Vector2(0.74268365, 0.74268365)
+texture = ExtResource("12_grs0w")
+
+[node name="x2" type="Sprite2D" parent="velha" unique_id=1153154318]
+modulate = Color(0.25541812, 0.12693429, 0.055937126, 1)
+position = Vector2(-385.00003, -136)
+scale = Vector2(0.74268365, 0.74268365)
+texture = ExtResource("12_grs0w")
+
+[node name="x3" type="Sprite2D" parent="velha" unique_id=675047166]
+modulate = Color(0.25541812, 0.12693429, 0.055937126, 1)
+position = Vector2(-186.00003, 62)
+scale = Vector2(0.74268365, 0.74268365)
+texture = ExtResource("12_grs0w")
+
+[node name="c1" type="Sprite2D" parent="velha" unique_id=916357956]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(-387.00003, 68)
+scale = Vector2(0.7901541, 0.7901541)
+texture = ExtResource("13_8tvlu")
+
+[node name="c2" type="Sprite2D" parent="velha" unique_id=664547226]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(-387.00003, -34)
+scale = Vector2(0.7901541, 0.7901541)
+texture = ExtResource("13_8tvlu")
+
+[node name="ColorRect" type="ColorRect" parent="velha" unique_id=1310273381]
+visible = false
+self_modulate = Color(0, 0.003921569, 0, 0.36862746)
+offset_left = -384.16437
+offset_top = -146.96268
+offset_right = -373.7411
+offset_bottom = 244.97345
+rotation = -0.7917993
+
+[connection signal="pressed" from="jogo_da_velha" to="." method="_on_jogo_da_velha_pressed"]
