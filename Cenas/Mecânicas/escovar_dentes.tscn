@@ -26,7 +26,8 @@ size = Vector2(488, 136)
 script = ExtResource("1_g63rm")
 
 [node name="Conteudo" type="Node2D" parent="." unique_id=1041000549]
-position = Vector2(536, 344)
+position = Vector2(646, 344)
+scale = Vector2(1.1876115, 1.1876115)
 
 [node name="background" type="Sprite2D" parent="Conteudo" unique_id=89190753]
 texture_filter = 1
@@ -35,10 +36,10 @@ scale = Vector2(1.5199289, 1.257958)
 texture = ExtResource("2_6yob2")
 
 [node name="barra_progresso" type="ProgressBar" parent="Conteudo" unique_id=1947713606]
-offset_left = -512.0
-offset_top = -328.0
-offset_right = -348.0
-offset_bottom = -301.0
+offset_left = -520.3722
+offset_top = -260.1861
+offset_right = -356.3722
+offset_bottom = -233.1861
 theme_override_fonts/font = ExtResource("3_q4dvf")
 metadata/_edit_use_anchors_ = true
 

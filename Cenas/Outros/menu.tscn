@@ -154,13 +154,13 @@ seed = 3954169046
 process_material = SubResource("ParticleProcessMaterial_3eiwf")
 
 [node name="PilhaPolaroid" type="Sprite2D" parent="." unique_id=544573107]
-position = Vector2(704, 160)
-scale = Vector2(0.2089118, 0.2089118)
+position = Vector2(744.9051, 160)
+scale = Vector2(0.21781018, 0.21781018)
 texture = ExtResource("9_fdxn8")
 
 [node name="Polaroid" type="Sprite2D" parent="." unique_id=1507596999]
-position = Vector2(704.00006, 167.14911)
-scale = Vector2(0.1742982, 0.1742982)
+position = Vector2(744.90515, 167.14911)
+scale = Vector2(0.18172225, 0.18172225)
 texture = ExtResource("11_snclk")
 
 [node name="cacos" type="Sprite2D" parent="." unique_id=972130580]
@@ -169,6 +169,24 @@ texture_repeat = 1
 position = Vector2(648, 169)
 scale = Vector2(0.34343052, 0.34343052)
 texture = ExtResource("8_hirk4")
+
+[node name="pass" type="Button" parent="." unique_id=421747662]
+layout_mode = 0
+offset_left = 824.9051
+offset_top = 149.14911
+offset_right = 842.9051
+offset_bottom = 180.14911
+scale = Vector2(1.042594, 1.042594)
+text = ">"
+
+[node name="rewind" type="Button" parent="." unique_id=999509653]
+layout_mode = 0
+offset_left = 648.9051
+offset_top = 149.14911
+offset_right = 666.9051
+offset_bottom = 180.14911
+scale = Vector2(1.042594, 1.042594)
+text = "<"
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=846541297]
 modulate = Color(0, 0, 0, 1)
@@ -255,22 +273,6 @@ texture = SubResource("GradientTexture2D_2wg5k")
 position = Vector2(358, 7)
 anchor_mode = 0
 zoom = Vector2(2.3, 2.3)
-
-[node name="pass" type="Button" parent="." unique_id=421747662]
-layout_mode = 0
-offset_left = 784.0
-offset_top = 149.14911
-offset_right = 802.0
-offset_bottom = 180.14911
-text = ">"
-
-[node name="rewind" type="Button" parent="." unique_id=999509653]
-layout_mode = 0
-offset_left = 608.0
-offset_top = 149.14911
-offset_right = 626.0
-offset_bottom = 180.14911
-text = "<"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=18256799]
 

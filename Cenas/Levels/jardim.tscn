@@ -6,7 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://dcbkwqny5e77v" path="res://Assets/Tilesets/Room_Builder_free_16x16.png" id="4_vu2r4"]
 [ext_resource type="Texture2D" uid="uid://dhfnkoytm16ga" path="res://Assets/Tilesets/Tileset Casa/exterior.png" id="5_ynbje"]
 [ext_resource type="PackedScene" uid="uid://bdkhna0ym5k04" path="res://Cenas/Player/Player.tscn" id="6_8dr38"]
-[ext_resource type="PackedScene" uid="uid://clmlhpndve1xw" path="res://Cenas/Mecânicas/player_marta.tscn" id="7_71t4b"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rq1sp"]
 texture = ExtResource("1_uojed")
@@ -2961,6 +2960,3 @@ tile_set = SubResource("TileSet_syayu")
 
 [node name="Player" parent="." unique_id=1053805525 instance=ExtResource("6_8dr38")]
 position = Vector2(552, 240)
-
-[node name="Player Marta" parent="." unique_id=1827310301 instance=ExtResource("7_71t4b")]
-position = Vector2(786, 172)
