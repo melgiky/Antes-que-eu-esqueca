@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://dw557vsd3u17x"]
+
+[ext_resource type="Texture2D" uid="uid://c40n7sadlw83w" path="res://Assets/Menu e UI/confete.png" id="1_1je2c"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_s20dg"]
+particle_flag_disable_z = true
+angle_min = 38.700012
+angle_max = 38.700012
+direction = Vector3(0, -1, 0)
+spread = 180.0
+initial_velocity_min = 642.36
+initial_velocity_max = 812.36
+angular_velocity_min = -205.16002
+angular_velocity_max = 514.83997
+orbit_velocity_min = -2.0
+orbit_velocity_max = -1.0109999
+gravity = Vector3(0, 550, 0)
+linear_accel_min = -2.2351742e-06
+linear_accel_max = 35.479996
+radial_accel_min = 62.369995
+radial_accel_max = 99.99999
+tangential_accel_min = -84.95
+tangential_accel_max = -84.95
+damping_min = 20.0
+damping_max = 50.000004
+scale_min = 0.03
+scale_max = 0.06
+
+[node name="menu_vitoria" type="Node2D" unique_id=1784363908]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=496609448]
+offset_right = 1430.0
+offset_bottom = 934.0
+color = Color(0, 0, 0, 1)
+
+[node name="GPUParticles2D2" type="GPUParticles2D" parent="." unique_id=1341279860]
+position = Vector2(1028, 664)
+amount = 35
+texture = ExtResource("1_1je2c")
+lifetime = 2.0
+explosiveness = 1.0
+randomness = 0.25
+process_material = SubResource("ParticleProcessMaterial_s20dg")

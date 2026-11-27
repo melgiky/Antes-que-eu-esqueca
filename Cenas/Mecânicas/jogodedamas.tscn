@@ -1,32 +1,73 @@
 [gd_scene format=3 uid="uid://cq2wdfx0a6af5"]
 
 [ext_resource type="Texture2D" uid="uid://cwfp4rgk1n7c7" path="res://Assets/Menu e UI/tabuleiro-normal.png" id="1_jo1vt"]
+[ext_resource type="Script" uid="uid://bthhjpgepss7p" path="res://Scripts/jogodedamas.gd" id="1_wegpi"]
 [ext_resource type="Texture2D" uid="uid://lsm2cj8lfi7m" path="res://Assets/Menu e UI/peça-branca.png" id="2_7misy"]
 [ext_resource type="Texture2D" uid="uid://cedc55j82cfmj" path="res://Assets/Menu e UI/peça-preta.png" id="3_wegpi"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_s20dg"]
+
 [node name="jogodedamas" type="Node2D" unique_id=942481261]
+script = ExtResource("1_wegpi")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=64109084]
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=482220329]
+[node name="Tabuleiro" type="Sprite2D" parent="." unique_id=482220329]
+position = Vector2(2, 0)
 texture = ExtResource("1_jo1vt")
+offset = Vector2(1, 6)
 
-[node name="PeçaBranca" type="Sprite2D" parent="." unique_id=1619269787]
-position = Vector2(29, 155)
-scale = Vector2(0.20916669, 0.20916669)
-texture = ExtResource("2_7misy")
+[node name="Sinal_movimento" type="ColorRect" parent="." unique_id=1429431124]
+visible = false
+modulate = Color(0, 1, 0, 0.26666668)
+offset_left = -1.0
+offset_top = -2.0
+offset_right = 62.0
+offset_bottom = 59.0
 
 [node name="PeçaPreta" type="Sprite2D" parent="." unique_id=2027680556]
-position = Vector2(-161, -228.99998)
-scale = Vector2(0.215, 0.215)
+visible = false
+position = Vector2(-1.1368684e-13, -1.1368684e-13)
+scale = Vector2(0.18, 0.18)
 texture = ExtResource("3_wegpi")
 
-[node name="PeçaBranca2" type="Sprite2D" parent="." unique_id=1687611699]
-position = Vector2(156.24998, 155.25)
-scale = Vector2(0.20916669, 0.20916669)
+[node name="PeçaBranca" type="Sprite2D" parent="." unique_id=1619269787]
+visible = false
+position = Vector2(-0.18750262, -0.18750334)
+scale = Vector2(0.18, 0.18)
 texture = ExtResource("2_7misy")
 
-[node name="PeçaPreta2" type="Sprite2D" parent="." unique_id=685503353]
-position = Vector2(-33.75, -228.74998)
-scale = Vector2(0.215, 0.215)
-texture = ExtResource("3_wegpi")
+[node name="ColorRect" type="ColorRect" parent="." unique_id=259848757]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -253.5
+offset_top = -253.5
+offset_right = 253.5
+offset_bottom = 253.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="." unique_id=432109982]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -836.0
+offset_top = -399.0
+offset_right = 989.0
+offset_bottom = -309.0
+grow_horizontal = 2
+
+[node name="Label" type="Label" parent="Panel" unique_id=378814509]
+layout_mode = 0
+offset_left = 508.0
+offset_top = 47.0
+offset_right = 571.0
+offset_bottom = 70.0
+text = "Sua vez!"
+label_settings = SubResource("LabelSettings_s20dg")
+horizontal_alignment = 1
+vertical_alignment = 1
